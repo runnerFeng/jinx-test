@@ -1,0 +1,6 @@
+/kuanter-hhb-api/target/
+/kuanter-hhb-provider/target/
+/target/
+.idea
+*.iml
+*.class
