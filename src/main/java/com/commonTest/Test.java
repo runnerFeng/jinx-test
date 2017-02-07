@@ -1,20 +1,23 @@
 package com.commonTest;
 
-import org.apache.commons.io.FileUtils;
-
-import java.io.File;
-import java.io.IOException;
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Vector;
 
 /**
- * Desc:FileUtils用法
- * Created by lf on 2017/1/25
+ * Desc:
+ * Created by lf on 2017/2/7
  */
 public class Test {
-    public static void main(String[] args) throws IOException {
-        String path = Thread.currentThread().getContextClassLoader().getResource("spring/spring.conf").getFile();
-        System.out.println(path);
-        System.out.println(FileUtils.readFileToString((new File(path)), "utf-8"));
+    public static void main(String[] args) {
+        List list = new ArrayList();
+        for (int i = 0; i < 11; i++) {
+            list.add(i);
+        }
+        List vector = new Vector();
+        List linkList = new LinkedList();
+
+        System.out.println(list.size());
     }
-
 }
-
