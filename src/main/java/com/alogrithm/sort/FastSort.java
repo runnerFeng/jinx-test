@@ -19,6 +19,8 @@ public class FastSort {
     public static void sort(int[] a, int low, int high) {
         int i, j, index;
         if (low > high) {
+
+
             return;
         }
         i = low;
