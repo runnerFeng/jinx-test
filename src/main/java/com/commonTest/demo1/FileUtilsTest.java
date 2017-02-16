@@ -1,4 +1,4 @@
-package com.commonTest;
+package com.commonTest.demo1;
 
 import org.apache.commons.io.FileUtils;
 
