@@ -1,4 +1,4 @@
-package com.commonTest;
+package com.commonTest.demo1;
 
 import org.apache.commons.io.FileUtils;
 
@@ -9,7 +9,7 @@ import java.io.IOException;
  * Desc:FileUtils用法
  * Created by lf on 2017/1/25
  */
-public class Test {
+public class FileUtilsTest {
     public static void main(String[] args) throws IOException {
         String path = Thread.currentThread().getContextClassLoader().getResource("spring/spring.conf").getFile();
         System.out.println(path);
