@@ -1,6 +1,7 @@
 package com.commonTest.demo3_xmlConvert;
 
 import com.thoughtworks.xstream.XStream;
+import javafx.scene.Parent;
 
 /**
  * Desc:
@@ -21,12 +22,14 @@ public class TestStream {
         person.getAddresses().add(address1);
         person.getAddresses().add(address2);
 
+
         String res=toXML(person);
 //        toEntity(res);
     }
 
     public static void toEntity(String inputXML){
         XStream xs = new XStream();
+
 //        这句和@XStreamAlias("person")等效
 //        xs.alias("person",Person.class);
 //        xs.alias("address",Address.class);
@@ -47,6 +50,10 @@ public class TestStream {
     public static <T extends Object> String toXML(T t){
         XStream xStream = new XStream();
 
+//        Class<?> cls = t.getClass();
+//        xStream.alias(cls.getSimpleName().toLowerCase(), cls);
+//        xStream.aliasSystemAttribute(null, "class"); // 去掉 class 属性
+
 //        Person person = new Person();
 //        person.setName("rojer");
 //        person.setPhoneNuber(999);
@@ -66,6 +73,7 @@ public class TestStream {
 //        xStream.useAttributeFor(Person.class,"name");
         //注册使用了注解的VO
         xStream.processAnnotations(new Class[]{Person.class,Address.class});
+//        xStream.autodetectAnnotations(true);//自动检测注解
         String xml = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>"+xStream.toXML(t);
 
         System.out.println(xml);
