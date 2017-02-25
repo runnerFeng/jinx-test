@@ -1,6 +1,7 @@
 package com.commonTest.demo2;
 
 import java.util.Date;
+import java.util.List;
 
 /**
  * Desc:
@@ -10,6 +11,7 @@ public class Student {
     private int id;
     private String name;
     private Date birthDay;
+    private List<B> bList;
 
     public int getId() {
         return id;
@@ -33,5 +35,13 @@ public class Student {
 
     public void setBirthDay(Date birthDay) {
         this.birthDay = birthDay;
+    }
+
+    public List<B> getbList() {
+        return bList;
+    }
+
+    public void setbList(List<B> bList) {
+        this.bList = bList;
     }
 }
