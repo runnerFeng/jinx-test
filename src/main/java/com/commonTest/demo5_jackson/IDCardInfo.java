@@ -1,4 +1,4 @@
-package com.commonTest.demo5;
+package com.commonTest.demo5_jackson;
 
 /**
  * Desc:扫描后接收身份证信息
