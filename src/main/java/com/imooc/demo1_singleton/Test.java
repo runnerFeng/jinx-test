@@ -1,4 +1,4 @@
-package com.imooc;
+package com.imooc.demo1_singleton;
 
 /**
  * Desc:
