@@ -1,4 +1,4 @@
-package com.commonTest.demo5;
+package com.commonTest.demo5_jackson;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 
