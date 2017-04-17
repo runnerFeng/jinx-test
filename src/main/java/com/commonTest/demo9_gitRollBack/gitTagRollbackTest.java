@@ -7,5 +7,7 @@ package com.commonTest.demo9_gitRollBack;
 public class gitTagRollbackTest {
     public static void main(String[] args) {
         System.out.println("first!");
+
+        System.out.println("second!");
     }
 }
