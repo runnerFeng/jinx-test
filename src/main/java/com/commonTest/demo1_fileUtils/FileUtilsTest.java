@@ -12,7 +12,9 @@ import java.io.IOException;
 public class FileUtilsTest {
     public static void main(String[] args) throws IOException {
         String path = Thread.currentThread().getContextClassLoader().getResource("spring/spring.conf").getFile();
+        String path1 = Thread.currentThread().getContextClassLoader().getResource(".").getPath();
         System.out.println(path);
+        System.out.println(path1);
         System.out.println(FileUtils.readFileToString((new File(path)), "utf-8"));
     }
 
