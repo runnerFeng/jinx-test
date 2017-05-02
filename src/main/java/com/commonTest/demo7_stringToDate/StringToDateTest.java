@@ -1,4 +1,4 @@
-package com.commonTest.demo7_StringToDate;
+package com.commonTest.demo7_stringToDate;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;

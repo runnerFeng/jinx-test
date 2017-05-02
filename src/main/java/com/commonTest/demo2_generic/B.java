@@ -1,4 +1,4 @@
-package com.commonTest.demo2;
+package com.commonTest.demo2_generic;
 
 /**
  * Desc:
