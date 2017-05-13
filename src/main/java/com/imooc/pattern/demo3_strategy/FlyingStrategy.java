@@ -1,4 +1,4 @@
-package com.imooc.demo3_strategy;
+package com.imooc.pattern.demo3_strategy;
 
 /**
  * Desc:策略接口，实现鸭子的飞行行为

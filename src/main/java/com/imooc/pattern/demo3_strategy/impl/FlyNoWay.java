@@ -1,6 +1,6 @@
-package com.imooc.demo3_strategy.impl;
+package com.imooc.pattern.demo3_strategy.impl;
 
-import com.imooc.demo3_strategy.FlyingStrategy;
+import com.imooc.pattern.demo3_strategy.FlyingStrategy;
 
 /**
  * Desc:

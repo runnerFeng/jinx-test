@@ -1,4 +1,4 @@
-package com.imooc.demo3_strategy;
+package com.imooc.pattern.demo3_strategy;
 
 /**
  * Desc:
@@ -10,7 +10,8 @@ public class DuckTest {
 //        duck = new MallarDuck();
 //        duck = new RedHeadDuck();
 //        duck = new RubberDuck();
-        duck = new BigYellow();
+//        duck = new BigYellow();
+        duck = new SpaceDuck();
         duck.display();
         duck.quack();
         duck.fly();

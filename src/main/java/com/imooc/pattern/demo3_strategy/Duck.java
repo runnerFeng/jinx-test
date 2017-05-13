@@ -1,4 +1,4 @@
-package com.imooc.demo3_strategy;
+package com.imooc.pattern.demo3_strategy;
 
 /**
  * Desc:显示和鸣叫

@@ -1,4 +1,4 @@
-package com.imooc.demo2_state;
+package com.imooc.pattern.demo2_state;
 
 /**
  * Desc:

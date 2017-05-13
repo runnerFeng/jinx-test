@@ -1,6 +1,6 @@
-package com.imooc.demo3_strategy;
+package com.imooc.pattern.demo3_strategy;
 
-import com.imooc.demo3_strategy.impl.FlyWithWin;
+import com.imooc.pattern.demo3_strategy.impl.FlyWithWin;
 
 /**
  * Desc:
