@@ -77,6 +77,7 @@ public class Equals {
         Integer i12 = Integer.valueOf(128);
         System.out.println(i11 == i12);
         System.out.println(i11.equals(i12));
+        //所以对于Integer的值比较推荐用equals方法，防止用==比较是掉进IntegerCache的坑中
         System.out.println("i11 i12------------------------------");
 
         //根据源码对象的equals方法是对地址的比较
