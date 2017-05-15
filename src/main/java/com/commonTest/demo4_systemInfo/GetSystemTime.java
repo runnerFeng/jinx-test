@@ -1,4 +1,4 @@
-package com.commonTest.demo6;
+package com.commonTest.demo4_systemInfo;
 
 import java.math.BigDecimal;
 import java.util.Date;

@@ -1,4 +1,4 @@
-package com.commonTest.demo4;
+package com.commonTest.demo4_systemInfo;
 
 import java.util.Properties;
 
