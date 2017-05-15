@@ -1,4 +1,6 @@
-package com.commonTest;
+package com.commonTest.alibabaDeveloperAggrement;
+
+import com.commonTest.Address;
 
 import javax.persistence.Embedded;
 
