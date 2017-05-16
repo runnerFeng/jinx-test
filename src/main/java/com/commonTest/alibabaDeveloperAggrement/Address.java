@@ -1,4 +1,4 @@
-package com.commonTest;
+package com.commonTest.alibabaDeveloperAggrement;
 
 import javax.persistence.Embeddable;
 

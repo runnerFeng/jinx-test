@@ -1,7 +1,5 @@
 package com.commonTest.alibabaDeveloperAggrement;
 
-import com.commonTest.Address;
-
 import javax.persistence.Embedded;
 
 /**
@@ -17,6 +15,11 @@ public class User {
 
     public User() {
         Address address = new Address("");
+    }
+
+    public static void main(String[] args) {
+        User test = new User();
+        System.out.println(test.getAddress());
     }
 
     public int getId() {
@@ -49,11 +52,6 @@ public class User {
 
     public void setAddress(Address address) {
         this.address = address;
-    }
-
-    public static void main(String[] args) {
-        User test = new User();
-        System.out.println(test.getAddress());
     }
 
 

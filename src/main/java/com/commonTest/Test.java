@@ -1,7 +1,5 @@
 package com.commonTest;
 
-import com.commonTest.alibabaDeveloperAggrement.User;
-
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
@@ -30,7 +28,5 @@ public class Test {
 //        todayStart.set(todayStart.get(Calendar.YEAR), todayStart.get(Calendar.MONTH), todayStart.get(Calendar.DATE), 0, 0, 0);
         thisMonthStart.set(thisMonthStart.get(Calendar.YEAR), thisMonthStart.get(Calendar.MONTH), 1, 0, 0, 0);
         System.out.println(thisMonthStart.getTime());
-
-        User u1 = new User();
     }
 }
