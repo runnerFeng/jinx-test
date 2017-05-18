@@ -8,7 +8,7 @@ import java.util.List;
  * Desc:
  * Created by jinx on 2017/5/17.
  */
-public class ForeachTest {
+public class Foreach {
     public static void main(String[] args) {
         //foreach循环中不能对元素进行修改操作（倒数第二个可以修改），否则会报java.util.ConcurrentModificationException
         //@link http://blog.csdn.net/bimuyulaila/article/details/52088124
