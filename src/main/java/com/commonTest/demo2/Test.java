@@ -1,14 +1,10 @@
 package com.commonTest.demo2;
 
-import com.fasterxml.jackson.core.SerializableString;
 import com.fasterxml.jackson.core.type.TypeReference;
-import com.fasterxml.jackson.databind.JavaType;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-import java.awt.datatransfer.StringSelection;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
 
@@ -55,7 +51,8 @@ studentList.add(st2);
         System.out.println(jsonFromArr);
         Student[] stuArr = mapper.readValue(jsonFromArr,Student[].class);
         System.out.println(stuArr);
-        System.out.println(mapper.readValue(jsonFromArr, new TypeReference<List<Student>>() {}));
+        System.out.println((String) mapper.readValue(jsonFromArr, new TypeReference<List<Student>>() {
+        }));
 
     }
 }

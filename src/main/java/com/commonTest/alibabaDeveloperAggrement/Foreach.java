@@ -43,5 +43,6 @@ public class Foreach {
         for (String s : b) {
             System.out.println(s);
         }
+
     }
 }
