@@ -22,8 +22,8 @@ public class Test {
         B b1 = new B();
         b1.setId(1);
         b1.setDesc("b1Desc");
-bs.add(b0);
-bs.add(b1);
+        bs.add(b0);
+        bs.add(b1);
         st1.setId(5237);
         st1.setName("liufeng");
         st1.setBirthDay(new Date());
@@ -38,19 +38,19 @@ bs.add(b1);
         System.out.println(mapper.writeValueAsString(st1));
 
         List<Student> studentList = new ArrayList<Student>();
-studentList.add(st1);
-studentList.add(st2);
+        studentList.add(st1);
+        studentList.add(st2);
         String jsonString = mapper.writeValueAsString(studentList);
         System.out.println(jsonString);
         //JsonConvertToList
-        List<Student> studentList1 = mapper.readValue(jsonString,List.class);
+        List<Student> studentList1 = mapper.readValue(jsonString, List.class);
         System.out.println(studentList1);
 //
-        Student[] strArr = {st1,st2};
+        Student[] strArr = {st1, st2};
         String jsonFromArr = mapper.writeValueAsString(strArr);
         System.out.println(jsonFromArr);
-        Student[] stuArr = mapper.readValue(jsonFromArr,Student[].class);
-        System.out.println(stuArr);
+        Student[] stuArr = mapper.readValue(jsonFromArr, Student[].class);
+        System.out.println(stuArr);System.out.println(stuArr);
         System.out.println((String) mapper.readValue(jsonFromArr, new TypeReference<List<Student>>() {
         }));
 
