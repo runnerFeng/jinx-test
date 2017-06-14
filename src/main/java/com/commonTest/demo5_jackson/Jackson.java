@@ -227,7 +227,7 @@ public class Jackson {
         /**
          * 通过key获取到ArrayMap数组对象
          */
-        arrayMap;
+        arrayMap
     }
 
 }
