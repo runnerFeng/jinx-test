@@ -1,7 +1,7 @@
 package com.commonTest.demo8_threadLocal;
 
 /**
- * Desc:
+ * Desc:当前线程变量
  * Created by jinx on 2017/3/31.
  */
 public class TestNum {
@@ -19,6 +19,7 @@ public class TestNum {
      }
 
      public static void main(String[] args) {
+          //每一个线程中的值都是独立的，互不影响
           TestNum tn = new TestNum();
           TestClient t1 = new TestClient(tn);
           TestClient t2 = new TestClient(tn);
