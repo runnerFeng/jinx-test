@@ -1,4 +1,4 @@
-package com.commonTest.demo2;
+package com.commonTest.demo2_generic;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;

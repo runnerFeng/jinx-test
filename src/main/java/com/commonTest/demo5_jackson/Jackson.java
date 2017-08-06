@@ -14,6 +14,112 @@ public class Jackson {
 
     private static String jsonStr = "{\"status\":\"OK\",\"data\":{\"facade\":\"0\",\"item\":{\"name\":\"秦龙\",\"cardno\":\"522732198701074213\",\"sex\":\"男\",\"folk\":\"水\",\"birthday\":\"1987年01月07日\",\"address\":\"贵州省三都水族自治县都江镇上江村五组\",\"issue_authority\":[],\"valid_period\":[],\"header_pic\":[]}}}";
 
+    private static String jsonStr1 = "{\n" +
+            "    \"userId\": \"0xf3cadf0f4f0a2728524cc1955062fe22af479d50\",\n" +
+            "    \"userName\": \"小黑\",\n" +
+            "    \"matter\": \"\",\n" +
+            "    \"count\": 0,\n" +
+            "    \"reason\": \"\",\n" +
+            "    \"contact\": \"\",\n" +
+            "    \"createTime\": 0,\n" +
+            "    \"financierInfos\": [\n" +
+            "        {\n" +
+            "            \"infoId\": 18,\n" +
+            "            \"infoDetail\": {\n" +
+            "                \"id\": 18,\n" +
+            "                \"businessNo\": \"F011706290015\",\n" +
+            "                \"userId\": \"0xf3cadf0f4f0a2728524cc1955062fe22af479d50\",\n" +
+            "                \"userName\": \"小黑\",\n" +
+            "                \"userType\": 1,\n" +
+            "                \"secAccount\": \"123456\",\n" +
+            "                \"secCode\": \"430719\",\n" +
+            "                \"secName\": \"九鼎集团\",\n" +
+            "                \"hideFlag\": 2,\n" +
+            "                \"pledgeNum\": 30000,\n" +
+            "                \"closePrice\": 0,\n" +
+            "                \"industry\": 5,\n" +
+            "                \"minAmountScale\": 2000,\n" +
+            "                \"maxAmountScale\": 200000,\n" +
+            "                \"minAmountLastDate\": 12,\n" +
+            "                \"maxAmountLastDate\": 19,\n" +
+            "                \"purpose\": 5,\n" +
+            "                \"createTimestamp\": 1498725729000,\n" +
+            "                \"endTimestamp\": 1506614400000,\n" +
+            "                \"status\": 2\n" +
+            "            },\n" +
+            "            \"infoType\": 1,\n" +
+            "            \"userName\": \"小黑\",\n" +
+            "            \"userId\": \"0xf3cadf0f4f0a2728524cc1955062fe22af479d50\",\n" +
+            "            \"reason\": \"你民工\"\n" +
+            "        },\n" +
+            "        {\n" +
+            "            \"infoId\": 16,\n" +
+            "            \"infoDetail\": {\n" +
+            "                \"id\": 16,\n" +
+            "                \"businessNo\": \"F011706290013\",\n" +
+            "                \"userId\": \"0xf3cadf0f4f0a2728524cc1955062fe22af479d50\",\n" +
+            "                \"userName\": \"小黑\",\n" +
+            "                \"userType\": 1,\n" +
+            "                \"secAccount\": \"123456\",\n" +
+            "                \"secCode\": \"430719\",\n" +
+            "                \"secName\": \"九鼎集团\",\n" +
+            "                \"hideFlag\": 2,\n" +
+            "                \"pledgeNum\": 30000,\n" +
+            "                \"closePrice\": 0,\n" +
+            "                \"industry\": 5,\n" +
+            "                \"minAmountScale\": 2000,\n" +
+            "                \"maxAmountScale\": 99900,\n" +
+            "                \"minAmountLastDate\": 12,\n" +
+            "                \"maxAmountLastDate\": 19,\n" +
+            "                \"purpose\": 5,\n" +
+            "                \"createTimestamp\": 1498725705000,\n" +
+            "                \"endTimestamp\": 1514476800000,\n" +
+            "                \"status\": 2\n" +
+            "            },\n" +
+            "            \"infoType\": 1,\n" +
+            "            \"userName\": \"hjjj\",\n" +
+            "            \"userId\": \"0xb9874077417735fa5bb811ad63930918e3a5bad6\",\n" +
+            "            \"reason\": \"监控\"\n" +
+            "        }\n" +
+            "    ],\n" +
+            "    \"investorInfos\": [\n" +
+            "        {\n" +
+            "            \"infoId\": 21,\n" +
+            "            \"infoDetail\": {\n" +
+            "                \"id\": 21,\n" +
+            "                \"userId\": \"0xf3cadf0f4f0a2728524cc1955062fe22af479d50\",\n" +
+            "                \"businessNo\": \"F021706290017\",\n" +
+            "                \"userName\": \"小黑\",\n" +
+            "                \"userType\": 1,\n" +
+            "                \"organizationType\": 0,\n" +
+            "                \"area\": 3,\n" +
+            "                \"industry\": [\n" +
+            "                    4,\n" +
+            "                    5,\n" +
+            "                    6\n" +
+            "                ],\n" +
+            "                \"minAmountScale\": 100,\n" +
+            "                \"maxAmountScale\": 99900,\n" +
+            "                \"minAmountLastDate\": 1,\n" +
+            "                \"maxAmountLastDate\": 999,\n" +
+            "                \"createTimestamp\": 1498725578000,\n" +
+            "                \"endTimestamp\": 1506614400000,\n" +
+            "                \"status\": 2\n" +
+            "            },\n" +
+            "            \"infoType\": 2,\n" +
+            "            \"userName\": \"小黑\",\n" +
+            "            \"userId\": \"0xf3cadf0f4f0a2728524cc1955062fe22af479d50\",\n" +
+            "            \"reason\": \"徐璐是曾小波美丽健康大方的姐姐徐璐是曾小波美丽健康大方的姐姐徐璐是曾小波美丽健康大方的姐姐徐璐是曾小波美丽健康大方的姐姐徐璐是曾小波美丽健康大方的姐姐徐璐是曾小波美丽健康大方的姐姐\"\n" +
+            "        }\n" +
+            "    ],\n" +
+            "    \"audit\": {\n" +
+            "        \"auditorId\": \"0x0000000000000000000000000000000000000000\",\n" +
+            "        \"auditComment\": \"\",\n" +
+            "        \"operateCode\": 0,\n" +
+            "        \"methodName\": \"\",\n" +
+            "        \"auditTime\": 0\n" +
+            "    }\n" +
+            "}";
     public static void main(String[] args) throws IOException {
 //测试通过json获取Object对象
         Object obj = getObjectByJson(jsonStr, "data.facade", TypeEnum.string); //层级递归String
@@ -23,6 +129,9 @@ public class Jackson {
         System.out.println(mapper.writeValueAsString(obj1));
         System.out.println(mapper.readValue(mapper.writeValueAsString(obj1),IDCardInfo.class).getName());
         System.out.println(((Map)obj1).get("name"));
+
+        System.out.println(getObjectByJson(jsonStr1,"",TypeEnum.map));
+
     }
 
     /**

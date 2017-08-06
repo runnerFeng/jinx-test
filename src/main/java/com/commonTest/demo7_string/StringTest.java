@@ -1,4 +1,4 @@
-package com.commonTest.demo7_String;
+package com.commonTest.demo7_string;
 
 /**
  * Desc:
