@@ -1,4 +1,4 @@
-package com.pattern.demo4.factory;
+package com.pattern.demo4.factory.simpleFactory;
 
 /**
  * Desc:
