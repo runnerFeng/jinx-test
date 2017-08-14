@@ -1,7 +1,7 @@
 package com.pattern.demo8.builder;
 
 /**
- * Desc:
+ * Desc:产品类
  * Created by jinx on 2017/8/11.
  */
 public class BenzModel extends CarModel {
