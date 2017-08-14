@@ -6,19 +6,18 @@ package com.pattern.demo4.factory.abstractFactory;
  */
 public class FemaleHumanFactory extends AbstractHumanFactory {
     @Override
-    public void createYellowHuman() {
-        super.createHuman(HumanEnum.YellowFemaleHuman);
+    public Human createYellowHuman() {
+        return super.createHuman(HumanEnum.YellowFemaleHuman);
     }
 
     @Override
-    public void createBlackHuman() {
-        super.createHuman(HumanEnum.BlackFemaleHuman);
+    public Human createBlackHuman() {
+        return super.createHuman(HumanEnum.BlackFemaleHuman);
 
     }
 
     @Override
-    public void createWhiteHuman() {
-        super.createHuman(HumanEnum.WhiteFemaleHuman);
-
+    public Human createWhiteHuman() {
+        return super.createHuman(HumanEnum.WhiteFemaleHuman);
     }
 }
