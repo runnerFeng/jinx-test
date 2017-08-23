@@ -4,10 +4,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Desc:
+ * Desc:产品类
  * Created by jinx on 2017/8/11.
  */
 public abstract class CarModel {
+
     private List<String> sequence = new ArrayList<>();
     protected abstract void start();
     protected abstract void alarm();
@@ -28,7 +29,7 @@ public abstract class CarModel {
         }
     }
 
-    public void setSequence(ArrayList<String> sequence){
+    public void setSequence(List<String> sequence) {
         this.sequence = sequence;
     }
 

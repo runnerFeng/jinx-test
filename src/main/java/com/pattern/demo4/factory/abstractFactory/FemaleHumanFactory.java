@@ -12,7 +12,7 @@ public class FemaleHumanFactory extends AbstractHumanFactory {
 
     @Override
     public Human createBlackHuman() {
-        return  super.createHuman(HumanEnum.BlackFemaleHuman);
+        return super.createHuman(HumanEnum.BlackFemaleHuman);
     }
 
     @Override
