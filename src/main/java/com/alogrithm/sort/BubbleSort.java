@@ -15,6 +15,7 @@ public class BubbleSort {
                     score[j + 1] = temp;
                 }
             }
+
             System.out.println("第" + (i + 1) + "次排序结果：");
             for (int a = 0; a < score.length; a++) {
                 System.out.print(score[a] + "\t");
