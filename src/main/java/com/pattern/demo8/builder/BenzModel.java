@@ -13,6 +13,7 @@ public class BenzModel extends CarModel {
 
     @Override
     protected void alarm() {
+
         System.out.println("奔驰车鸣笛了");
     }
 
