@@ -1,8 +1,7 @@
 package com.pattern.demo8.builder;
 
 /**
- * Desc:建造者模式最主要功能是基本方法的调用顺序安排，也就是这些基本方法已经实现了；而工厂方法则重点是创建，你要什么对象我创造一个对象出来，组装顺序则不是他关心的
- * 建造者模式使用的场景，一是产品类非常的复杂，或者产品类中的调用顺序不同产生了不同的效能，这个时候使用建造者模式是非常合适；二是“在对象创建过程中会使用到系统中的一些其它对象，这些对象在产品对象的创建过程中不易得到
+ * Desc:
  * Created by jinx on 2017/8/14.
  */
 public class Client {
@@ -38,10 +37,11 @@ public class Client {
         //3.此时，客户端只需选择满足自己需求的方案就行了、
         //生产一万辆A型奔驰。。。
         Direct direct = new Direct();
-        for (int i = 0; i < 1000; i++) {
+        for (int i = 0; i < 10000; i++) {
             direct.getABenzModel().run();
+            direct.getBBenzModel().run();
         }
-        //生产100辆B型宝马
+        //生产1000辆B型宝马。。。
         for (int i = 0; i < 100; i++) {
             direct.getBBMWModel().run();
         }
