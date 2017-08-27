@@ -1,4 +1,4 @@
-package com.pattern.demo10.command;
+package com.pattern.demo10.command.demo1;
 
 /**
  * Desc:

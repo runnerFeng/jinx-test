@@ -1,4 +1,4 @@
-package com.pattern.demo10.command;
+package com.pattern.demo10.command.demo1;
 
 /**
  * Desc:
@@ -24,7 +24,7 @@ public class RequirementGroup extends Group {
 
     @Override
     public void find() {
-        System.out.println("招到需求组");
+        System.out.println("找到需求组");
 
     }
 
