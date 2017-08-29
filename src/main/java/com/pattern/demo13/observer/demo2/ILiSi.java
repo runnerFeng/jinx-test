@@ -1,4 +1,4 @@
-package com.pattern.demo13.observer;
+package com.pattern.demo13.observer.demo2;
 
 /**
  * Desc:
