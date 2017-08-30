@@ -8,6 +8,7 @@ import java.util.Observer;
  * Created by jinx on 2017/8/29.
  */
 public class LiSi implements Observer {
+
     @Override
     public void update(Observable o, Object arg) {
         System.out.println("李斯：观察到李斯活动，开始向老板汇报了...");

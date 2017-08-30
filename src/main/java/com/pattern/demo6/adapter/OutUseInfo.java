@@ -3,7 +3,7 @@ package com.pattern.demo6.adapter;
 import java.util.Map;
 
 /**
- * Desc:
+ * Desc:类适配器，通过继承需要适配的类来实现
  * Created by jinx on 2017/8/10.
  */
 public class OutUseInfo extends OuterUser implements IUserInfo {

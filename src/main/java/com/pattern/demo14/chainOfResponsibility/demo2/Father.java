@@ -10,6 +10,7 @@ public class Father extends Hander {
         super(1);
     }
 
+    //SRP原则,迪米特法则
     @Override
     public void response(IWomen women) {
         System.out.println("女儿向父亲请示");

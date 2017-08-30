@@ -11,5 +11,8 @@ public interface KindWomen {
      */
     void makeEyesWihtMan();
 
+    /**
+     * 啪啪啪
+     */
     void happyWithMan();
 }

@@ -14,7 +14,7 @@ public class App {
         //对接之后
         IUserInfo yongGirl = new OutUseInfo();
         for (int i = 0; i < 101; i++) {
-            yongGirl.getMobileNumber();
+            System.out.println(yongGirl.getUserName() + "-------" + yongGirl.getMobileNumber());
         }
     }
 }

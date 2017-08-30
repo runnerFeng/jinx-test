@@ -12,6 +12,7 @@ public class SingletonPattern {
     private SingletonPattern() {
     }
 
+    //添加synchronized关键字是防止多线程环境下的问题
     public synchronized static SingletonPattern getInstance() {
         return SINGLETON_PATTERN;
     }

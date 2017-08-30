@@ -10,6 +10,7 @@ public class Women implements IWomen {
     //妇女的请示
     private String request;
 
+    //通过构造方法传参，所以全局变量无需setter方法
     public Women(int type, String request) {
         this.type = type;
         switch (this.type) {
@@ -34,4 +35,5 @@ public class Women implements IWomen {
     public String getRequest() {
         return this.request;
     }
+
 }

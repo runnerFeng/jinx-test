@@ -1,7 +1,7 @@
 package com.pattern.demo5.facade;
 
 /**
- * Desc:门面模式
+ * Desc:门面模式:直接调用门面的方法就可以了，不用了解具体的实现方法以及相关的业务顺序,一个子系统比较复杂的实话，比如算法或者业务比较复杂，就可以封装出一个或多个门面出来，项目的结构简单，而且扩展性非常好
  * Created by jinx on 2017/8/10.
  */
 public class Client {

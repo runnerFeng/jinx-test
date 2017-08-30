@@ -8,10 +8,12 @@ public class WangPo implements KindWomen {
 
     private KindWomen kindWomen;
 
+    //默认无参构造方法传潘金莲
     public WangPo() {
-        kindWomen = new PanJinLian();
+        this.kindWomen = new PanJinLian();
     }
 
+    //有参构造方法可以传其他被代理类
     public WangPo(KindWomen kindWomen) {
         this.kindWomen = kindWomen;
     }
