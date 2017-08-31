@@ -20,13 +20,16 @@ public class Client {
     public static BranchImpl compositeCorpTree() {
         //首先产生总经理CEO
         BranchImpl root = new BranchImpl("王大麻子", "总经理", 100000);
+
         //把三个部门经理产生出来
         BranchImpl developDep = new BranchImpl("刘大瘸子", "研发部门经理", 10000);
         BranchImpl salesDep = new BranchImpl("马二拐子", "销售部门经理", 20000);
         BranchImpl financeDep = new BranchImpl("赵三驼子", "财务部经理", 30000);
+
         //再把三个小组长产生出来
         BranchImpl firstDevGroup = new BranchImpl("杨三乜斜", "开发一组组长", 5000);
         BranchImpl secondDevGroup = new BranchImpl("吴大棒槌", "开发二组组长", 6000);
+
         //把所有的小兵都产生出来
         LeafImpl a = new LeafImpl("a", "开发人员", 2000);
         LeafImpl b = new LeafImpl("b", "开发人员", 2000);
@@ -40,16 +43,19 @@ public class Client {
         LeafImpl j = new LeafImpl("j", "财务人员", 5000);
         LeafImpl k = new LeafImpl("k", "CEO秘书", 8000);
         LeafImpl zhengLaoLiu = new LeafImpl("郑老六", "研发部副经理", 20000);
+
         //开始组装
         //CEO下有三个部门经理和一个秘书
         root.addSubordinate(k);
         root.addSubordinate(developDep);
         root.addSubordinate(salesDep);
         root.addSubordinate(financeDep);
+
         //研发部经理
         developDep.addSubordinate(zhengLaoLiu);
         developDep.addSubordinate(firstDevGroup);
         developDep.addSubordinate(secondDevGroup);
+
         //看看开发两个开发小组下有什么
         firstDevGroup.addSubordinate(a);
         firstDevGroup.addSubordinate(b);
@@ -57,6 +63,7 @@ public class Client {
         secondDevGroup.addSubordinate(d);
         secondDevGroup.addSubordinate(e);
         secondDevGroup.addSubordinate(f);
+
         //再看销售部下的人员情况
         salesDep.addSubordinate(h);
         salesDep.addSubordinate(i);

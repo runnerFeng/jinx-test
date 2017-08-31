@@ -18,6 +18,7 @@ public abstract class HummerModel {
 
     //钩子方法，抽象类来实现，子类可以重写，虽然客户端调用了同一个方法，但是因为不同的子类可能不同，所以执行结果可能不同（多态），典型的父类调用子类方法
     protected boolean isAlarm() {
+        //默认为true
         return true;
     }
 

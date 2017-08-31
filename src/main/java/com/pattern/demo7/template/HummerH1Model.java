@@ -27,7 +27,7 @@ public class HummerH1Model extends HummerModel {
         System.out.println("H1型号熄火");
     }
 
-    //钩子方法，子类重写
+    //钩子方法，子类重写，覆盖父类默认值
     @Override
     protected boolean isAlarm() {
         return alarmFlag;
