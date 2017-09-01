@@ -7,7 +7,6 @@ package com.pattern.demo16.state.demo3;
 public class RunningState extends LiftState {
     @Override
     public void open() {
-
     }
 
     @Override
@@ -21,7 +20,7 @@ public class RunningState extends LiftState {
 
     @Override
     public void stop() {
-        context.setLiftState(Context.stoppingState);
+        super.context.setLiftState(Context.stoppingState);
         super.context.stop();
     }
 }

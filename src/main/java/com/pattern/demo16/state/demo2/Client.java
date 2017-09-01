@@ -7,7 +7,8 @@ package com.pattern.demo16.state.demo2;
 public class Client {
     public static void main(String[] args) {
         ILift iLift = new Lift();
-        iLift.setState(ILift.STOPPING_STATE);
+//        iLift.setState(ILift.STOPPING_STATE);
+        iLift.setState(ILift.RUNNING_STATE);
         iLift.open();
         iLift.close();
         iLift.run();

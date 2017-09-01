@@ -1,7 +1,7 @@
 package com.pattern.demo16.state.demo2;
 
 /**
- * Desc:
+ * Desc:站在方法的角度去检查状态，一个方法中只能执行特定状态下的行为
  * Created by jinx on 2017/8/31.
  */
 public class Lift implements ILift {
