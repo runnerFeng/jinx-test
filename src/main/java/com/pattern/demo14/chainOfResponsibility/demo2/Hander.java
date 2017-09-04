@@ -9,7 +9,7 @@ public abstract class Hander {
     private int level;
     private Hander nextHander;
 
-    //抽象类的构造方法的一个作用就是让具体子类传自己的参数上来，然后让父类来干活
+    //抽象类的构造方法的一个作用就是让具体子类传自己的参数上来，然后让父类来干活（子类必须重写构造函数）
     public Hander(int level) {
         this.level = level;
     }
