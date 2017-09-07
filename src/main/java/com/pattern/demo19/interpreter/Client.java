@@ -6,7 +6,7 @@ import java.io.InputStreamReader;
 import java.util.HashMap;
 
 /**
- * Desc:
+ * Desc:这个例子看着有点烦，解释器模式用的也比较少
  * Created by jinx on 2017/9/6.
  */
 public class Client {

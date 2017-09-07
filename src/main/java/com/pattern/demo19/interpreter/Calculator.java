@@ -37,18 +37,28 @@ public class Calculator {
         this.expression = stack.pop();
     }
 
+    public static void main(String[] args) {
+        Stack<Expression> stack = new Stack();
+        Expression left;
+        Expression right;
+        String str = "a+b";
+        char[] chars = str.toCharArray();
+        for (int i = 0; i < chars.length; i++) {
+            switch (chars[i]) {
+                case '+':
+                    left = stack.pop();
+
+
+            }
+        }
+
+//        int i = 0;
+//        System.out.println(i++);
+//        System.out.println(++i);
+    }
+
     //开始运算
     public int run(HashMap<String, Integer> var) {
         return this.expression.interpreter(var);
     }
-
-//    public static void main(String[] args) {
-//        Stack stack = new Stack();
-//        String str = "a+b";
-//        char[] chars  = str.toCharArray();
-//        for (int i = 0; i < chars.length; i++) {
-//            String arg = chars[i];
-//            System.out.println(arg);
-//        }
-//    }
 }
