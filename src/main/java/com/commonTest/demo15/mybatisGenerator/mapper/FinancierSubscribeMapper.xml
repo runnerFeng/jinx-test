@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.commonTest.demo15.mybatisGenerator.dao.FinancierSubscribeMapper">
+    <resultMap id="BaseResultMap" type="com.commonTest.demo15.mybatisGenerator.model.FinancierSubscribe">
+        <constructor>
+            <idArg column="id" jdbcType="BIGINT" javaType="java.lang.Long"/>
+            <arg column="sec_code" jdbcType="VARCHAR" javaType="java.lang.String"/>
+            <arg column="sec_name" jdbcType="VARCHAR" javaType="java.lang.String"/>
+            <arg column="industry" jdbcType="VARCHAR" javaType="java.lang.String"/>
+            <arg column="min_amount_scale" jdbcType="BIGINT" javaType="java.lang.Long"/>
+            <arg column="max_amount_scale" jdbcType="BIGINT" javaType="java.lang.Long"/>
+            <arg column="max_amount_last_date" jdbcType="INTEGER" javaType="java.lang.Integer"/>
+            <arg column="min_amount_last_date" jdbcType="INTEGER" javaType="java.lang.Integer"/>
+            <arg column="purpose" jdbcType="VARCHAR" javaType="java.lang.String"/>
+            <arg column="create_time" jdbcType="TIMESTAMP" javaType="java.util.Date"/>
+            <arg column="update_time" jdbcType="TIMESTAMP" javaType="java.util.Date"/>
+            <arg column="user_id" jdbcType="VARCHAR" javaType="java.lang.String"/>
+        </constructor>
+    </resultMap>
+    <sql id="Base_Column_List">
+    id, sec_code, sec_name, industry, min_amount_scale, max_amount_scale, max_amount_last_date, 
+    min_amount_last_date, purpose, create_time, update_time, user_id
+  </sql>
+    <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long">
+        select
+        <include refid="Base_Column_List"/>
+        from t_financier_subscribe
+        where id = #{id,jdbcType=BIGINT}
+    </select>
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    delete from t_financier_subscribe
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+    <insert id="insert" parameterType="com.commonTest.demo15.mybatisGenerator.model.FinancierSubscribe">
+    insert into t_financier_subscribe (id, sec_code, sec_name, 
+      industry, min_amount_scale, max_amount_scale, 
+      max_amount_last_date, min_amount_last_date, purpose, 
+      create_time, update_time, user_id
+      )
+    values (#{id,jdbcType=BIGINT}, #{secCode,jdbcType=VARCHAR}, #{secName,jdbcType=VARCHAR}, 
+      #{industry,jdbcType=VARCHAR}, #{minAmountScale,jdbcType=BIGINT}, #{maxAmountScale,jdbcType=BIGINT}, 
+      #{maxAmountLastDate,jdbcType=INTEGER}, #{minAmountLastDate,jdbcType=INTEGER}, #{purpose,jdbcType=VARCHAR}, 
+      #{createTime,jdbcType=TIMESTAMP}, #{updateTime,jdbcType=TIMESTAMP}, #{userId,jdbcType=VARCHAR}
+      )
+  </insert>
+    <insert id="insertSelective" parameterType="com.commonTest.demo15.mybatisGenerator.model.FinancierSubscribe">
+        insert into t_financier_subscribe
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+                id,
+            </if>
+            <if test="secCode != null">
+                sec_code,
+            </if>
+            <if test="secName != null">
+                sec_name,
+            </if>
+            <if test="industry != null">
+                industry,
+            </if>
+            <if test="minAmountScale != null">
+                min_amount_scale,
+            </if>
+            <if test="maxAmountScale != null">
+                max_amount_scale,
+            </if>
+            <if test="maxAmountLastDate != null">
+                max_amount_last_date,
+            </if>
+            <if test="minAmountLastDate != null">
+                min_amount_last_date,
+            </if>
+            <if test="purpose != null">
+                purpose,
+            </if>
+            <if test="createTime != null">
+                create_time,
+            </if>
+            <if test="updateTime != null">
+                update_time,
+            </if>
+            <if test="userId != null">
+                user_id,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+                #{id,jdbcType=BIGINT},
+            </if>
+            <if test="secCode != null">
+                #{secCode,jdbcType=VARCHAR},
+            </if>
+            <if test="secName != null">
+                #{secName,jdbcType=VARCHAR},
+            </if>
+            <if test="industry != null">
+                #{industry,jdbcType=VARCHAR},
+            </if>
+            <if test="minAmountScale != null">
+                #{minAmountScale,jdbcType=BIGINT},
+            </if>
+            <if test="maxAmountScale != null">
+                #{maxAmountScale,jdbcType=BIGINT},
+            </if>
+            <if test="maxAmountLastDate != null">
+                #{maxAmountLastDate,jdbcType=INTEGER},
+            </if>
+            <if test="minAmountLastDate != null">
+                #{minAmountLastDate,jdbcType=INTEGER},
+            </if>
+            <if test="purpose != null">
+                #{purpose,jdbcType=VARCHAR},
+            </if>
+            <if test="createTime != null">
+                #{createTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="updateTime != null">
+                #{updateTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="userId != null">
+                #{userId,jdbcType=VARCHAR},
+            </if>
+        </trim>
+    </insert>
+    <update id="updateByPrimaryKeySelective"
+            parameterType="com.commonTest.demo15.mybatisGenerator.model.FinancierSubscribe">
+        update t_financier_subscribe
+        <set>
+            <if test="secCode != null">
+                sec_code = #{secCode,jdbcType=VARCHAR},
+            </if>
+            <if test="secName != null">
+                sec_name = #{secName,jdbcType=VARCHAR},
+            </if>
+            <if test="industry != null">
+                industry = #{industry,jdbcType=VARCHAR},
+            </if>
+            <if test="minAmountScale != null">
+                min_amount_scale = #{minAmountScale,jdbcType=BIGINT},
+            </if>
+            <if test="maxAmountScale != null">
+                max_amount_scale = #{maxAmountScale,jdbcType=BIGINT},
+            </if>
+            <if test="maxAmountLastDate != null">
+                max_amount_last_date = #{maxAmountLastDate,jdbcType=INTEGER},
+            </if>
+            <if test="minAmountLastDate != null">
+                min_amount_last_date = #{minAmountLastDate,jdbcType=INTEGER},
+            </if>
+            <if test="purpose != null">
+                purpose = #{purpose,jdbcType=VARCHAR},
+            </if>
+            <if test="createTime != null">
+                create_time = #{createTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="updateTime != null">
+                update_time = #{updateTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="userId != null">
+                user_id = #{userId,jdbcType=VARCHAR},
+            </if>
+        </set>
+        where id = #{id,jdbcType=BIGINT}
+    </update>
+    <update id="updateByPrimaryKey" parameterType="com.commonTest.demo15.mybatisGenerator.model.FinancierSubscribe">
+    update t_financier_subscribe
+    set sec_code = #{secCode,jdbcType=VARCHAR},
+      sec_name = #{secName,jdbcType=VARCHAR},
+      industry = #{industry,jdbcType=VARCHAR},
+      min_amount_scale = #{minAmountScale,jdbcType=BIGINT},
+      max_amount_scale = #{maxAmountScale,jdbcType=BIGINT},
+      max_amount_last_date = #{maxAmountLastDate,jdbcType=INTEGER},
+      min_amount_last_date = #{minAmountLastDate,jdbcType=INTEGER},
+      purpose = #{purpose,jdbcType=VARCHAR},
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      update_time = #{updateTime,jdbcType=TIMESTAMP},
+      user_id = #{userId,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+</mapper>
