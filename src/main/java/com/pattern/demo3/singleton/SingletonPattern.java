@@ -6,9 +6,10 @@ package com.pattern.demo3.singleton;
  */
 public class SingletonPattern {
 
+    //此处final具体几个意思？要不要都行吗？
     private static final SingletonPattern SINGLETON_PATTERN = new SingletonPattern();
 
-    //private修饰，限制住不能直接产生一个实例
+    //private修饰，限制外界不能直接产生一个实例
     private SingletonPattern() {
     }
 
@@ -16,4 +17,6 @@ public class SingletonPattern {
     public synchronized static SingletonPattern getInstance() {
         return SINGLETON_PATTERN;
     }
+
+
 }

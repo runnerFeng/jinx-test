@@ -1,4 +1,4 @@
-package com.pattern.demo20.Flyweight.demo2;
+package com.pattern.demo20.flyweight.demo2;
 
 /**
  * Desc:尽量使用池的概念

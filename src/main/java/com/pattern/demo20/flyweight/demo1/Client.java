@@ -1,4 +1,4 @@
-package com.pattern.demo20.Flyweight.demo1;
+package com.pattern.demo20.flyweight.demo1;
 
 /**
  * Desc:
