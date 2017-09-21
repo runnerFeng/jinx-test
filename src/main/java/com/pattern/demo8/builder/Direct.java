@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Desc:导演类
+ * Desc:导演类，对建造器做一个单独处理
  * Created by jinx on 2017/8/15.
  */
 public class Direct {

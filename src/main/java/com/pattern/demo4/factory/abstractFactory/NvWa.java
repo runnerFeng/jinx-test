@@ -1,7 +1,8 @@
 package com.pattern.demo4.factory.abstractFactory;
 
 /**
- * Desc:
+ * Desc:1.抽象工厂模式
+ *      2.产品类和工厂类都用：接口继承实现
  * Created by jinx on 2017/8/9.
  */
 public class NvWa {

@@ -25,6 +25,7 @@ public abstract class HummerModel {
     //模板方法，final决定该方法执行顺序不能修改，但可以通过钩子方法变更内部执行顺序
     final public void run() {
         this.start();
+
         if(this.isAlarm()){
             this.alarm();
         }

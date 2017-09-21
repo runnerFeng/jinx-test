@@ -1,7 +1,7 @@
 package com.pattern.demo6.adapter;
 
 /**
- * Desc:适配器模式 类适配器（继承关系） 对象适配器（组合关系）
+ * Desc:适配器模式 类适配器（继承关系） 对象适配器（组合(依赖)关系）
  * Created by jinx on 2017/8/10.
  */
 public class App {
@@ -12,7 +12,7 @@ public class App {
 //            yongGirl.getMobileNumber();
 //        }
         //对接之后
-        IUserInfo yongGirl = new OutUseInfo();
+        IUserInfo yongGirl = new OutUserAdapter();
         for (int i = 0; i < 101; i++) {
             System.out.println(yongGirl.getUserName() + "-------" + yongGirl.getMobileNumber());
         }

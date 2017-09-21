@@ -1,7 +1,7 @@
 package com.pattern.demo1.strategy;
 
 /**
- * Desc:
+ * Desc:接口实现
  * Created by jinx on 2017/8/5.
  */
 public class Context {
