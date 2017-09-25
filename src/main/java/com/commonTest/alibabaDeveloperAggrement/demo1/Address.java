@@ -13,7 +13,7 @@ public class Address {
     private String area;
 
     /**
-     * 给一个构造函数，初始化改值对象
+     * 给一个构造函数，初始化该值对象
      *
      * @param area
      */
