@@ -1,4 +1,4 @@
-package com.commonTest.alibabaDeveloperAggrement;
+package com.commonTest.alibabaDeveloperAggrement.demo1;
 
 /**
  * Desc:equals test
@@ -6,7 +6,7 @@ package com.commonTest.alibabaDeveloperAggrement;
  */
 public class Equals {
     public static void main(String[] args) {
-        //调用equals方法时，常量放在前面避免nep异常
+        //调用equals方法时，常量放在前面避免npe异常
         //String的equals方法首先比较
         String s = null;
         String s0 = "aa";
