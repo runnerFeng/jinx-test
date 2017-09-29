@@ -37,5 +37,12 @@ public class HashMapKey {
         }
 
 
+        // TODO: 2017/9/25 java8
+
+
+        Map<String, String> map = new HashMap<>();
+        map.put(null, "11");
+        System.out.println(map.get(null));
+
     }
 }
