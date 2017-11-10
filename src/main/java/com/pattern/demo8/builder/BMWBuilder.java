@@ -19,4 +19,5 @@ public class BMWBuilder extends CarBuilder {
     public CarModel getCarModel() {
         return this.bmwModel;
     }
+
 }
