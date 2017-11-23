@@ -1,4 +1,4 @@
-package com.commonTest.demo17_dateUtil;
+package com.common.test.demo17_dateUtil;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
