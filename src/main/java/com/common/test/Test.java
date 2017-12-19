@@ -29,5 +29,6 @@ public class Test {
         thisMonthStart.set(thisMonthStart.get(Calendar.YEAR), thisMonthStart.get(Calendar.MONTH), 1, 0, 0, 0);
         System.out.println(thisMonthStart.getTime());
 
+
     }
 }
