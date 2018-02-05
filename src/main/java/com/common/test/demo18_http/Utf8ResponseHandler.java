@@ -1,4 +1,4 @@
-package com.common.test.http;
+package com.common.test.demo18_http;
 
 import org.apache.http.Consts;
 import org.apache.http.HttpEntity;
