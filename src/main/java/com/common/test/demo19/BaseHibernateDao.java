@@ -28,4 +28,11 @@ public class BaseHibernateDao<T,ID extends Serializable>{
     public Class<T> getClazz(){
         return this.clazz;
     }
+
+//    Iterable
+//    DirectoryStream
+//    Collection
+//    List
+//    Set
+//    Reader
 }
