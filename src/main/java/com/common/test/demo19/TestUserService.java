@@ -3,7 +3,7 @@ package com.common.test.demo19;
 /**
  * @author jinx
  * @date 2018/2/5 17:38
- * Desc:
+ * Desc:getGenericSuperclass测试
  */
 public class TestUserService {
     public static void main(String[] args) {
