@@ -1,4 +1,4 @@
-package com.common.test.demo7;
+package com.common.test.demo7_string;
 
 /**
  * @author jinx

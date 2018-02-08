@@ -10,6 +10,7 @@ public class Equals {
         //String的equals方法首先比较
         String s = null;
         String s0 = "aa";
+
         if (s0.equals(s))
 //        if (s.equals(s0))
         {
@@ -86,6 +87,8 @@ public class Equals {
         System.out.println(u1 == u2);
         System.out.println(u1.equals(u2));
         System.out.println("u1 u2------------------------------");
+
+
 
     }
 }
