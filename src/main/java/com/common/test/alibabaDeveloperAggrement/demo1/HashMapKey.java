@@ -11,7 +11,6 @@ import java.util.Map;
 public class HashMapKey {
     public static void main(String[] args) {
         Map<User, String> map1 = new HashMap<User, String>();
-
         User u1 = new User("11");
         User u2 = new User("22");
         User u3 = new User("33");

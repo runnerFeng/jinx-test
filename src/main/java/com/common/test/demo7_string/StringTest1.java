@@ -55,6 +55,7 @@ public class StringTest1 {
         String s12 = "str01";
         s11.intern();
         System.out.println(s11 == s12);
+
     }
 
 }
