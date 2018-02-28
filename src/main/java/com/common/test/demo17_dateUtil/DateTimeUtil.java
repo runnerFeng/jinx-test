@@ -88,18 +88,18 @@ public class DateTimeUtil {
 
     public static String convertTimeStampToString(Date asDate,
                                                   String asPattern) {
-        if (asDate == null)
-            return "";
+        if (asDate == null){
+            return "";}
         SimpleDateFormat lFormat = new SimpleDateFormat();
-        if ((asPattern != null) && (asPattern.length() > 0))
-            lFormat.applyPattern(asPattern);
+        if ((asPattern != null) && (asPattern.length() > 0)){
+            lFormat.applyPattern(asPattern);}
         return lFormat.format(asDate);
     }
 
     public static String timeStampToString(long timestmp, String pattern) {
         SimpleDateFormat lFormat = new SimpleDateFormat();
-        if ((pattern != null) && (pattern.length() > 0))
-            lFormat.applyPattern(pattern);
+        if ((pattern != null) && (pattern.length() > 0)){
+            lFormat.applyPattern(pattern);}
         return lFormat.format(timestmp);
     }
 
