@@ -37,7 +37,7 @@ public class INI4j {
      * @throws FileNotFoundException
      */
     public INI4j(String path) throws FileNotFoundException, UnsupportedEncodingException {
-        if(StringUtils.startsWithIgnoreCase(path, "file:/")){
+        if(org.apache.commons.lang3.StringUtils.startsWithIgnoreCase(path, "file:/")){
             URL url = null;
             try {
                 url = new URL(path);
@@ -187,7 +187,7 @@ public class INI4j {
         System.out.println("b:" + b);
 
         String path = "/nt.html?ada=1&bd=3?";
-        path = StringUtils.substringBefore(path,"?");
+        path = org.apache.commons.lang3.StringUtils.substringBefore(path,"?");
         System.out.println("aa" + path);
 
 

@@ -1,6 +1,8 @@
 package com.common.test.demo23_util;
 
-import com.juzix.jugo.developer.common.jersey.JsonResp;
+
+import com.common.test.demo12_responseJsonResult.JsonResp;
+import org.apache.commons.lang3.StringUtils;
 import org.apache.http.HttpStatus;
 
 import javax.servlet.ServletRequest;

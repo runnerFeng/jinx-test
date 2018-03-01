@@ -91,7 +91,7 @@ public class IpUtils {
      * @return true代表远程地址有效，false代表远程地址无效
      */
     private static boolean isEffective(final String remoteAddr) {
-        if (StringUtils.isNotEmpty(remoteAddr) && !StringUtils.equalsIgnoreCase("unknown", remoteAddr)) {
+        if (StringUtils.isNotEmpty(remoteAddr) && !org.apache.commons.lang3.StringUtils.equalsIgnoreCase("unknown", remoteAddr)) {
             return isIpv4(remoteAddr) || isIpv6(remoteAddr);
         }
         return false;

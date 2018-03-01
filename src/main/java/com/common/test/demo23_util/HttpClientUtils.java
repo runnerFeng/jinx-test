@@ -21,8 +21,8 @@ import org.apache.http.protocol.HTTP;
 import org.apache.http.ssl.SSLContexts;
 import org.apache.http.ssl.TrustStrategy;
 import org.apache.http.util.EntityUtils;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+import org.apache.log4j.LogManager;
+import org.slf4j.Logger;
 
 import javax.net.ssl.SSLContext;
 import java.security.cert.CertificateException;
@@ -35,7 +35,7 @@ import java.util.Map;
  * Created by lvxy on 2017/2/26.
  */
 public class HttpClientUtils {
-    private static Logger logger = LogManager.getLogger(HttpClientUtils.class);
+    private static Logger logger = (Logger) LogManager.getLogger(HttpClientUtils.class);
 
     private static final String CHARSET = "UTF-8";
 

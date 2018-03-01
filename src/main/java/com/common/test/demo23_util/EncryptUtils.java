@@ -65,7 +65,7 @@ public class EncryptUtils {
 	 */
 	public static boolean verifyPassword(String passMD5Second, String storedPassword, String saltHexString){
 		String password = DigestUtils.md5Hex(passMD5Second + saltHexString);
-		return StringUtils.equalsIgnoreCase(password, storedPassword);
+		return org.apache.commons.lang3.StringUtils.equalsIgnoreCase(password, storedPassword);
 	}
 
 
