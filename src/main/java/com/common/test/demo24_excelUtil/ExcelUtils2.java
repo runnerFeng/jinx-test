@@ -1,4 +1,4 @@
-package com.common.test.demo23_util;
+package com.common.test.demo24_excelUtil;
 
 import org.apache.poi.hssf.usermodel.*;
 import org.apache.poi.hssf.util.HSSFColor;
@@ -260,7 +260,7 @@ public class ExcelUtils2 {
 
             // 第六步，将文件存到指定位置
             try {
-                FileOutputStream fout = new FileOutputStream("D:students.xls");
+                FileOutputStream fout = new FileOutputStream("c:students.xls");
                 wb.write(fout);
                 String str = "导出" + fileName + "成功！";
                 System.out.println(str);
