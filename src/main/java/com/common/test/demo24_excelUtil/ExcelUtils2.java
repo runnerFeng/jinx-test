@@ -1,6 +1,5 @@
 package com.common.test.demo24_excelUtil;
 
-
 import org.apache.poi.hssf.usermodel.*;
 import org.apache.poi.hssf.util.HSSFColor;
 import org.apache.poi.ss.usermodel.Cell;
@@ -21,35 +20,9 @@ import java.util.*;
  */
 public class ExcelUtils2 {
 
-    private static void setCellValue(Cell cell, Object obj) {
-        if (obj == null) {
-        } else if (obj instanceof String) {
-            cell.setCellValue((String) obj);
-        } else if (obj instanceof Date) {
-            Date date = (Date) obj;
-            if (date != null) {
-                cell.setCellValue(DateUtils.dfDateTime.format(date));
-            }
-        } else if (obj instanceof Calendar) {
-            Calendar calendar = (Calendar) obj;
-            if (calendar != null) {
-                cell.setCellValue(DateUtils.dfDateTime.format(calendar.getTime()));
-            }
-        } else if (obj instanceof Timestamp) {
-            Timestamp timestamp = (Timestamp) obj;
-            if (timestamp != null) {
-                cell.setCellValue(DateUtils.dfDateTime.format(new Date(timestamp.getTime())));
-            }
-        } else if (obj instanceof Double) {
-            cell.setCellValue((Double) obj);
-        } else {
-            cell.setCellValue(obj.toString());
-        }
-    }
-
     public static void ExportWithResponse(String sheetName, String titleName, String fileName, String queryTitle,
-                                   int[] columnWidth, Map<String, String> headMap, List<MpcApp> mpcAppList,
-                                   HttpServletResponse response) throws Exception {
+                                          int[] columnWidth, Map<String, String> headMap, List<MpcApp> mpcAppList,
+                                          HttpServletResponse response) throws Exception {
         List<Map<String, Object>> dataList = assembleData(mpcAppList);
 
         HSSFWorkbook wb = exportNoResponse(sheetName, titleName, queryTitle, columnWidth, headMap, dataList);
@@ -75,7 +48,7 @@ public class ExcelUtils2 {
     }
 
     public static void ExportNoResponse(String sheetName, String titleName, String fileName, String queryTitle, int[] columnWidth,
-                                 Map<String, String> headMap, List<MpcApp> mpcAppList) {
+                                        Map<String, String> headMap, List<MpcApp> mpcAppList) {
 
         List<Map<String, Object>> dataList = assembleData(mpcAppList);
 
@@ -114,7 +87,8 @@ public class ExcelUtils2 {
         return dataList;
     }
 
-    private static HSSFWorkbook exportNoResponse(String sheetName, String titleName, String queryTitle, int[] columnWidth, Map<String, String> headMap, List<Map<String, Object>> dataList) {
+    private static HSSFWorkbook exportNoResponse(String sheetName, String titleName, String queryTitle, int[] columnWidth,
+                                                 Map<String, String> headMap, List<Map<String, Object>> dataList) {
         Set<String> keys = headMap.keySet();
         //1.创建一个webbook，对应一个Excel文件
         HSSFWorkbook wb = new HSSFWorkbook();
@@ -145,6 +119,9 @@ public class ExcelUtils2 {
         // 设置标题样式
         cell0.setCellStyle(style0);
 
+        //修复合并列后边框消失问题
+        fillCellBorder(row0, cell0, style0, 1, columnWidth.length);
+
         HSSFRow row1 = sheet.createRow(1);
         row1.setHeightInPoints(25);
         HSSFCellStyle style1 = setCellStyleAndFont(wb, 1);
@@ -152,6 +129,9 @@ public class ExcelUtils2 {
         sheet.addMergedRegion(new CellRangeAddress(1, 1, 0, keys.size() - 1));
         cell1.setCellValue(queryTitle);
         cell1.setCellStyle(style1);
+
+        //修复合并列后边框消失问题
+        fillCellBorder(row1, cell1, style1, 1, columnWidth.length);
 
         // 5.创建第2行
         HSSFRow row2 = sheet.createRow(2);
@@ -186,6 +166,32 @@ public class ExcelUtils2 {
         return wb;
     }
 
+    private static void setCellValue(Cell cell, Object obj) {
+        if (obj == null) {
+        } else if (obj instanceof String) {
+            cell.setCellValue((String) obj);
+        } else if (obj instanceof Date) {
+            Date date = (Date) obj;
+            if (date != null) {
+                cell.setCellValue(DateUtils.dfDateTime.format(date));
+            }
+        } else if (obj instanceof Calendar) {
+            Calendar calendar = (Calendar) obj;
+            if (calendar != null) {
+                cell.setCellValue(DateUtils.dfDateTime.format(calendar.getTime()));
+            }
+        } else if (obj instanceof Timestamp) {
+            Timestamp timestamp = (Timestamp) obj;
+            if (timestamp != null) {
+                cell.setCellValue(DateUtils.dfDateTime.format(new Date(timestamp.getTime())));
+            }
+        } else if (obj instanceof Double) {
+            cell.setCellValue((Double) obj);
+        } else {
+            cell.setCellValue(obj.toString());
+        }
+    }
+
     private static HSSFCellStyle setCellStyleAndFont(HSSFWorkbook wb, int rowNumber) {
         HSSFCellStyle style = wb.createCellStyle();
         //是否缩进
@@ -201,12 +207,14 @@ public class ExcelUtils2 {
         style.setVerticalAlignment(HSSFCellStyle.VERTICAL_CENTER);
         style.setFillForegroundColor(HSSFColor.TAN.index);
         style.setFillPattern(HSSFCellStyle.SOLID_FOREGROUND);
-        //边框显示黑色
+        //边框和边框颜色黑色
         style.setBottomBorderColor(HSSFColor.BLACK.index);
+        style.setTopBorderColor(HSSFColor.BLACK.index);
+
         style.setBorderBottom(HSSFCellStyle.BORDER_THIN);
+        style.setBorderTop(HSSFCellStyle.BORDER_THIN);
         style.setBorderLeft(HSSFCellStyle.BORDER_THIN);
         style.setBorderRight(HSSFCellStyle.BORDER_THIN);
-        style.setBorderTop(HSSFCellStyle.BORDER_THIN);
 
         // 创建字体样式
         HSSFFont headerFont0 = wb.createFont();
@@ -233,6 +241,23 @@ public class ExcelUtils2 {
         style.setBorderRight(HSSFCellStyle.BORDER_THIN);
         style.setBorderTop(HSSFCellStyle.BORDER_THIN);
         return style;
+    }
+
+    /**
+     * 修复合并列后边框消失问题
+     *
+     * @param row
+     * @param cell
+     * @param style
+     * @param startIndex
+     * @param endIndex
+     */
+    private static void fillCellBorder(HSSFRow row, HSSFCell cell, HSSFCellStyle style, int startIndex, int endIndex) {
+        for (int i = startIndex; i < endIndex; i++) {
+            cell = row.createCell(i);
+            cell.setCellValue("");
+            cell.setCellStyle(style);
+        }
     }
 
 }
