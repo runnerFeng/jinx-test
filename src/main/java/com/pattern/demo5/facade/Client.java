@@ -17,6 +17,5 @@ public class Client {
         //门面模式调用
         ModenPostOffice modenPostOffice = new ModenPostOffice();
         modenPostOffice.sendLetter("hello rose,i`m jack!", "Happy Road No 666");
-
     }
 }
