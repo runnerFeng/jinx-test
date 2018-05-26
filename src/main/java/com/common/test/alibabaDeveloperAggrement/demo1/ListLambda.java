@@ -14,9 +14,7 @@ public class ListLambda {
         list.add("1");
         list.add("2");
         list.add("3");
-        list.stream().forEach(s -> {
-            System.out.println(s);
-        });
+        list.stream().forEach(s -> System.out.print(s));
 
         //stream.map()处理List并给另一个list赋值
 
