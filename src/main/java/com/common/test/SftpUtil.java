@@ -24,7 +24,7 @@ public class SftpUtil {
         Session session;
         Channel channel = null;
         JSch jsch = new JSch();
-        List<String> localFilePath = new ArrayList<String>();
+        List<String> localFilePath = new ArrayList<>();
         if (port <= 0) {
             //连接服务器，采用默认端口
             session = jsch.getSession(user, ip);
@@ -92,12 +92,13 @@ public class SftpUtil {
     }
 
     public static void main(String[] args) throws Exception {
-        String hostname = "192.168.10.85";
+//        String hostname = "192.168.10.85";
+        String hostname = "192.168.112.45";
         int port = 22;
-        String username = "zjex";
-        String password = "juzhen";
-        String remotePath = "/home/zjex";
-        List<String> filenames = new ArrayList<String>();
+        String username = "root";
+        String password = "Juzhen123!";
+        String remotePath = "/home/nemo/start";
+        List<String> filenames = new ArrayList<>();
         String filename = "nohup.out";
         filenames.add(filename);
 
