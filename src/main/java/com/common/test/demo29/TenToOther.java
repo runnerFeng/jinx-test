@@ -1,5 +1,6 @@
 package com.common.test.demo29;
 
+import java.math.BigInteger;
 import java.util.Scanner;
 
 /**
@@ -18,6 +19,8 @@ public class TenToOther {
             a[i] = Integer.parseInt(str[i]);
         }
         t.transform(a[0], a[1]);
+
+        BigInteger s = new BigInteger("1");
     }
 
     public void transform(int num, int n) {
