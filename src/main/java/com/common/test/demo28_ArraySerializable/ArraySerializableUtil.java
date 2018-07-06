@@ -3,10 +3,7 @@ package com.common.test.demo28_ArraySerializable;
 import sun.misc.BASE64Decoder;
 import sun.misc.BASE64Encoder;
 
-import java.io.ByteArrayInputStream;
-import java.io.ByteArrayOutputStream;
-import java.io.ObjectInputStream;
-import java.io.ObjectOutputStream;
+import java.io.*;
 
 /**
  * @author jinx
@@ -14,11 +11,28 @@ import java.io.ObjectOutputStream;
  * Desc:数组序列化，反序列化工具
  */
 public class ArraySerializableUtil {
-    public static String encode(int[][] array) throws Exception {
-        String result ;
+
+   public static String encodeInt(int[][] array) throws Exception {
+        return encode(array);
+    }
+
+    public static int[][] decodeInt(String s) throws Exception {
+        return (int[][]) decode(s);
+    }
+
+    public static String encodeLong(long[][] array) throws Exception {
+        return encode(array);
+    }
+
+    public static long[][] decodeLong(String s) throws Exception {
+        return (long[][]) decode(s);
+    }
+
+    private static <T> String encode(T t) throws IOException {
+        String result;
         ByteArrayOutputStream bos = new ByteArrayOutputStream();
         ObjectOutputStream oos = new ObjectOutputStream(bos);
-        oos.writeObject(array);
+        oos.writeObject(t);
         oos.flush();
         oos.close();
         byte[] b = bos.toByteArray();
@@ -27,19 +41,18 @@ public class ArraySerializableUtil {
         return result;
     }
 
-    public static int[][] decode(String s) throws Exception {
-        int[][] result = null;
+    private static Object decode(String s) throws IOException, ClassNotFoundException {
         BASE64Decoder base64 = new BASE64Decoder();
         byte[] b = base64.decodeBuffer(s);
         ByteArrayInputStream bis = new ByteArrayInputStream(b);
         ObjectInputStream ois = new ObjectInputStream(bis);
-        result = (int[][]) ois.readObject();
+        Object o = ois.readObject();
         ois.close();
-        return result;
+        return o;
     }
 
     public static void main(String[] args) {
-        int[][] array = new int[][] { { 1, 2, 3 }, { 4, 5 } };
+        int[][] array = new int[][]{{1, 2, 3}, {4, 5}};
         for (int i = 0; i < array.length; i++) {
             for (int j = 0; j < array[i].length; j++) {
                 if (j != 0) {
