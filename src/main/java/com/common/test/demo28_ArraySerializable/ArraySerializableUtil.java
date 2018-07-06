@@ -64,7 +64,7 @@ public class ArraySerializableUtil {
         }
         try {
             String s = encode(array);
-            System.out.println(s);
+            System.out.p (int[][]) decode(s)
             int[][] array2 = decode(s);
 
             for (int i = 0; i < array2.length; i++) {
