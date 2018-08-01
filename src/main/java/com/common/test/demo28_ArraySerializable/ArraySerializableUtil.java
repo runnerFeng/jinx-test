@@ -12,7 +12,7 @@ import java.io.*;
  */
 public class ArraySerializableUtil {
 
-   public static String encodeInt(int[][] array) throws Exception {
+    public static String encodeInt(int[][] array) throws Exception {
         return encode(array);
     }
 
@@ -64,8 +64,8 @@ public class ArraySerializableUtil {
         }
         try {
             String s = encode(array);
-            System.out.p (int[][]) decode(s)
-            int[][] array2 = decode(s);
+            System.out.println(s);
+            int[][] array2 = decodeInt(s);
 
             for (int i = 0; i < array2.length; i++) {
                 for (int j = 0; j < array2[i].length; j++) {
@@ -77,7 +77,48 @@ public class ArraySerializableUtil {
                 System.out.println();
             }
         } catch (Exception e) {
+
         }
+
+
+//        Long[][] array = new Long[][]{{9223372036854775807L, 2222222222L, 33333333L}, {4L, 5L}};
+//        for (int i = 0; i < array.length; i++) {
+//            for (int j = 0; j < array[i].length; j++) {
+//                if (j != 0) {
+//                    System.out.print(",");
+//                }
+//                System.out.print(array[i][j]);
+//            }
+//            System.out.println();
+//        }
+//        try {
+//            String s = encode(array);
+//            System.out.println("encodeResult:" + s);
+//            Long[][] array2 = decodeInt(s);
+//
+//            for (int i = 0; i < array2.length; i++) {
+//                for (int j = 0; j < array2[i].length; j++) {
+//                    if (j != 0) {
+//                        System.out.print(",");
+//                    }
+//                    System.out.print(array2[i][j]);
+//                }
+//                System.out.println();
+//            }
+//        } catch (Exception e) {
+//        }
+
+
+//        int[][] array = new int[][]{{1, 2, 3}, {4, 5}};
+//        Integer[][]
+//        for (int i = 0; i < array.length; i++) {
+//            int[] ints = array[i];
+//            for (int j = 0; j < ints.length; j++) {
+//                Integer anInt = ints[j];
+//
+//            }
+//
+//        }
 
     }
 }
