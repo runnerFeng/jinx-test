@@ -46,7 +46,7 @@ public class ClassUtils {
             URL resource = resources.nextElement();
             dirs.add(new File(resource.getFile()));
         }
-        ArrayList<Class> classes = new ArrayList<Class>();
+        ArrayList<Class> classes = new ArrayList<>();
         for (File directory : dirs) {
             classes.addAll(findClasses(directory, packageName));
         }
@@ -55,7 +55,7 @@ public class ClassUtils {
 
     private static List<Class> findClasses(File directory, String packageName)
             throws ClassNotFoundException {
-        List<Class> classes = new ArrayList<Class>();
+        List<Class> classes = new ArrayList<>();
         if (!directory.exists()) {
             return classes;
         }

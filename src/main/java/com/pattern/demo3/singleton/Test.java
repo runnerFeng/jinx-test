@@ -6,8 +6,6 @@ package com.pattern.demo3.singleton;
  */
 public class Test {
     public static void main(String[] args) {
-
-
         System.out.println(SingletonPattern.SINGLETON_PATTERN);
         System.out.println(SingletonPattern.getInstance());
     }
