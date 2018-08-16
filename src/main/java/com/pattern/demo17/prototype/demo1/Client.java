@@ -7,7 +7,9 @@ import java.util.Random;
  * Created by jinx on 2017/9/3.
  */
 public class Client {
-    //发送邮件总数，数据库中取得
+    /**
+     * 发送邮件总数，数据库中取得
+     */
     private static int MAX_COUNT = 6;
 
     public static void main(String[] args) {
