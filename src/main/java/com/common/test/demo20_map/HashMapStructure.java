@@ -1,4 +1,4 @@
-package com.common.test.demo20;
+package com.common.test.demo20_map;
 
 import java.util.HashMap;
 import java.util.Iterator;

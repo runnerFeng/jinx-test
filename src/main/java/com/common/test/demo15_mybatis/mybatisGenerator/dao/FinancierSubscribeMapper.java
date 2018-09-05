@@ -1,6 +1,6 @@
-package com.common.test.demo15.mybatisGenerator.dao;
+package com.common.test.demo15_mybatis.mybatisGenerator.dao;
 
-import com.common.test.demo15.mybatisGenerator.model.FinancierSubscribe;
+import com.common.test.demo15_mybatis.mybatisGenerator.model.FinancierSubscribe;
 
 public interface FinancierSubscribeMapper {
     int deleteByPrimaryKey(Long id);

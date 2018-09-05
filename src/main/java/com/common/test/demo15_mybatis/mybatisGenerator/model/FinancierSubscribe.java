@@ -1,4 +1,4 @@
-package com.common.test.demo15.mybatisGenerator.model;
+package com.common.test.demo15_mybatis.mybatisGenerator.model;
 
 import java.util.Date;
 

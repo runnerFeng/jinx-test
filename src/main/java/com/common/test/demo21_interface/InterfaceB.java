@@ -1,4 +1,4 @@
-package com.common.test.demo21;
+package com.common.test.demo21_interface;
 
 /**
  * @author jinx

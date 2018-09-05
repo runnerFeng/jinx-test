@@ -1,4 +1,4 @@
-package com.common.test.demo19;
+package com.common.test.demo19_generic;
 
 import java.io.Serializable;
 import java.lang.reflect.ParameterizedType;

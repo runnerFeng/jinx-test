@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.common.test.demo15.mybatisGenerator.dao.FinancierSubscribeMapper">
-    <resultMap id="BaseResultMap" type="com.common.test.demo15.mybatisGenerator.model.FinancierSubscribe">
+<mapper namespace="com.common.test.demo15_mybatis.mybatisGenerator.dao.FinancierSubscribeMapper">
+    <resultMap id="BaseResultMap" type="com.common.test.demo15_mybatis.mybatisGenerator.model.FinancierSubscribe">
         <constructor>
             <idArg column="id" jdbcType="BIGINT" javaType="java.lang.Long"/>
             <arg column="sec_code" jdbcType="VARCHAR" javaType="java.lang.String"/>
@@ -31,7 +31,7 @@
     delete from t_financier_subscribe
     where id = #{id,jdbcType=BIGINT}
   </delete>
-    <insert id="insert" parameterType="com.common.test.demo15.mybatisGenerator.model.FinancierSubscribe">
+    <insert id="insert" parameterType="com.common.test.demo15_mybatis.mybatisGenerator.model.FinancierSubscribe">
     insert into t_financier_subscribe (id, sec_code, sec_name, 
       industry, min_amount_scale, max_amount_scale, 
       max_amount_last_date, min_amount_last_date, purpose, 
@@ -43,7 +43,7 @@
       #{createTime,jdbcType=TIMESTAMP}, #{updateTime,jdbcType=TIMESTAMP}, #{userId,jdbcType=VARCHAR}
       )
   </insert>
-    <insert id="insertSelective" parameterType="com.common.test.demo15.mybatisGenerator.model.FinancierSubscribe">
+    <insert id="insertSelective" parameterType="com.common.test.demo15_mybatis.mybatisGenerator.model.FinancierSubscribe">
         insert into t_financier_subscribe
         <trim prefix="(" suffix=")" suffixOverrides=",">
             <if test="id != null">
@@ -123,7 +123,7 @@
         </trim>
     </insert>
     <update id="updateByPrimaryKeySelective"
-            parameterType="com.common.test.demo15.mybatisGenerator.model.FinancierSubscribe">
+            parameterType="com.common.test.demo15_mybatis.mybatisGenerator.model.FinancierSubscribe">
         update t_financier_subscribe
         <set>
             <if test="secCode != null">
@@ -162,7 +162,7 @@
         </set>
         where id = #{id,jdbcType=BIGINT}
     </update>
-    <update id="updateByPrimaryKey" parameterType="com.common.test.demo15.mybatisGenerator.model.FinancierSubscribe">
+    <update id="updateByPrimaryKey" parameterType="com.common.test.demo15_mybatis.mybatisGenerator.model.FinancierSubscribe">
     update t_financier_subscribe
     set sec_code = #{secCode,jdbcType=VARCHAR},
       sec_name = #{secName,jdbcType=VARCHAR},

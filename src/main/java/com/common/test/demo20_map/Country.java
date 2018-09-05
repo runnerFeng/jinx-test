@@ -1,4 +1,4 @@
-package com.common.test.demo20;
+package com.common.test.demo20_map;
 
 /**
  * @author jinx
