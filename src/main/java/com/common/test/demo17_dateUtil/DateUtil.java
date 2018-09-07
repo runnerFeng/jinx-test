@@ -19,12 +19,12 @@ public class DateUtil {
     public static DateTimeFormatter dateFormatter = DateTimeFormatter.ofPattern(pattern);
 
 
-    public static void main(String[] args) {
-        Date date = new Date();
-        String dateString = formatter.format(date);
-        System.out.println(date);
-        System.out.println(dateString);
-    }
+//    public static void main(String[] args) {
+//        Date date = new Date();
+//        String dateString = formatter.format(date);
+//        System.out.println(date);
+//        System.out.println(dateString);
+//    }
 
     public static DateTimeFormatter getDateTimeFormatter() {
         return dateFormatter;

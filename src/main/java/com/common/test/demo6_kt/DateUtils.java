@@ -37,7 +37,7 @@ public final class DateUtils {
     }
 
     /**
-     * 获取指定个月之后的事件
+     * 获取指定个月之后的时间
      *
      * @author Mei Xianzhi
      * @date 2012-8-20 下午05:02:03
@@ -130,7 +130,7 @@ public final class DateUtils {
      * @author MeiXianzhi
      */
     public static Date addWeeks(Date date, int amount) {
-        return add(date, Calendar.YEAR, amount);
+        return add(date, Calendar.WEEK_OF_MONTH, amount);
     }
 
     /**
@@ -203,6 +203,18 @@ public final class DateUtils {
             c.add(calendarField, amount);
             return c.getTime();
         }
+    }
+
+    public static void main(String[] args) {
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+
+        Date date = addWeeks(new Date(),-1);
+        Date date1 = getBeginTimeOfDay(date);
+        Date date2 = getEndTimeOfDay(date);
+        String dat1 = sdf.format(date1);
+        String dat2 = sdf.format(date2);
+        System.out.println(dat1);
+        System.out.println(dat2);
     }
 
 }
