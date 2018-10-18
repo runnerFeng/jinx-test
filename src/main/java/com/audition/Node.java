@@ -20,8 +20,9 @@ public class Node {
         valuel = this.getValuel();
         Node[] nodes = this.getChileNodes();
         for (Node node : nodes) {
-            if (node.getMaxValue() > valuel)
+            if (node.getMaxValue() > valuel) {
                 valuel = node.getMaxValue();
+            }
         }
         return valuel;
     }
