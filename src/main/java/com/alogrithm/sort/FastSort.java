@@ -27,13 +27,16 @@ public class FastSort {
         j = high;
         index = a[i];
         while (i < j) {
-            while (i < j && a[j] >= index)
+            while (i < j && a[j] >= index) {
                 j--;
-            if (i < j)
+            }
+            if (i < j) {
                 a[i++] = a[j];
+            }
 
-            while (i < j && a[i] < index)
+            while (i < j && a[i] < index) {
                 i++;
+            }
             if (i < j) {
                 a[j--] = a[i];
             }

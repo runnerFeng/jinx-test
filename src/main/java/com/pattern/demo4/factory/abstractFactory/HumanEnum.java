@@ -15,14 +15,12 @@ public enum HumanEnum {
 
     private String value = "";
 
-    private HumanEnum(String value) {
+    HumanEnum(String value) {
         this.value = value;
     }
 
     public String getValue() {
         return this.value;
     }
-
-    ;
 
 }
