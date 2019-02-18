@@ -7,23 +7,24 @@ package com.alogrithm.sort;
 public class BubbleSort {
     public static void main(String[] args) {
         int score[] = {101, 69, 75, 87, 82, 90, 99, 100};
-        for (int i = 0; i < score.length - 1; i++) {//控制趟数
-            for (int j = 0; j < score.length - (i + 1); j++) {//控制次数
-                if (score[j] < score[j + 1]) {
+        bubbleSort(score);
+
+        for (int a = 0; a < score.length; a++) {
+            System.out.print(score[a] + "\t");
+        }
+    }
+
+    public static void bubbleSort(int[] score) {
+        // 控制趟数
+        for (int i = 0; i < score.length - 1; i++) {
+            // 控制次数，相比于插入排序该算法此处对比该位置右边的数
+            for (int j = 0; j < score.length - (i + 1); j++) {
+                if (score[j] > score[j + 1]) {
                     int temp = score[j];
                     score[j] = score[j + 1];
                     score[j + 1] = temp;
                 }
             }
-            System.out.println("第" + (i + 1) + "次排序结果：");
-            for (int a = 0; a < score.length; a++) {
-                System.out.print(score[a] + "\t");
-            }
-            System.out.println("");
-        }
-        System.out.println("最终排序结果：");
-        for (int a = 0; a < score.length; a++) {
-            System.out.print(score[a] + "\t");
         }
     }
 }
