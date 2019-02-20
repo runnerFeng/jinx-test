@@ -14,7 +14,7 @@ public class IntegerTest {
         System.out.println(i1.equals(i2));
         System.out.println(i1==i2);
 
-        // 2.int和integer比较时只要两个变量的值相等，怎结果相等，因为integer会自动拆箱为int类型
+        // 2.int和integer比较时只要两个变量的值相等，则结果相等，因为integer会自动拆箱为int类型
         System.out.println("-------2------");
         Integer i3 = new Integer(1);
         int i4 = 1;
