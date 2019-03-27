@@ -1,4 +1,4 @@
-package com.audition;
+package com.audition.demo1;
 
 /**
  * Desc:二叉树求最大值
@@ -16,7 +16,6 @@ public class Node {
     }
 
     public int getMaxValue() {
-
         valuel = this.getValuel();
         Node[] nodes = this.getChileNodes();
         for (Node node : nodes) {
