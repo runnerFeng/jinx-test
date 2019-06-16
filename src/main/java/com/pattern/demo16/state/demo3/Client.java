@@ -8,8 +8,8 @@ package com.pattern.demo16.state.demo3;
 public class Client {
     public static void main(String[] args) {
         Context context = new Context();
-//        context.setLiftState(new ClosingState());
-        context.setLiftState(Context.runningState);
+        context.setLiftState(new ClosingState());
+//        context.setLiftState(Context.runningState);
         //1.此种方式是：该状态下可以调用该方法，但是如果状态不对的情况下该方法中什么都不做(但是可以进入该方法体)；
         //2.还有一种方式是该状态下可以调用该方法，但是如果状态不对的情况下不能进入该方法体。
         context.open();

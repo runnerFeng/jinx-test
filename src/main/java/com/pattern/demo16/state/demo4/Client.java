@@ -7,7 +7,7 @@ package com.pattern.demo16.state.demo4;
 public class Client {
     public static void main(String[] args) {
         Lift lift = new Lift();
-        lift.setState(LiftSateEnum.CLOSING);
+        lift.setState(LiftSateEnum.RUNNING);
         lift.open();
         lift.close();
         lift.stop();
