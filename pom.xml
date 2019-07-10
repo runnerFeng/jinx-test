@@ -198,6 +198,12 @@
             <artifactId>httpcore</artifactId>
             <version>4.4.9</version>
         </dependency>
+        <!--quartz-->
+        <dependency>
+            <groupId>quartz</groupId>
+            <artifactId>quartz</artifactId>
+            <version>1.5.2</version>
+        </dependency>
 
     </dependencies>
 

@@ -30,20 +30,20 @@ public class SortTest {
         appleList.add(apple5);
         appleList.add(apple6);
 
+        System.out.println("----------根据type分组--------------");
         Map<Integer, List<Apple>> map = appleList.stream().collect(Collectors.groupingBy(Apple::getType));
         for (Map.Entry<Integer, List<Apple>> entry : map.entrySet()) {
             System.out.println(entry.getValue());
         }
 
-
-        System.out.println("-----------------------");
+        System.out.println("----------根据type分组,根据count统计-------------");
         Map<Integer, LongSummaryStatistics> map1 = appleList.stream().collect(Collectors.groupingBy(Apple::getType,Collectors.summarizingLong(Apple::getCount)));
         for (Map.Entry<Integer, LongSummaryStatistics> entry : map1.entrySet()) {
             LongSummaryStatistics statistics = entry.getValue();
             System.out.println(statistics);
         }
 
-        System.out.println("------------------------");
+        System.out.println("-----------根据type分组，根据count再分组-------------");
         Map<Integer, Map<Long, List<Apple>>> map2 = appleList.stream().collect(Collectors.groupingBy(Apple::getType,Collectors.groupingBy(Apple::getCount)));
         for (Map.Entry<Integer, Map<Long, List<Apple>>> entry : map2.entrySet()) {
             System.out.println(entry.getValue());
@@ -51,8 +51,12 @@ public class SortTest {
 
         System.out.println("-----------------");
 //        Map<Integer, Map<Long, List<Apple>>> map3 = appleList.stream().collect(Collectors.groupingBy(Apple::getType));
-        System.out.println("-----------------------");
+        System.out.println("-----------根据type分组，再统计------------");
         Map<Integer, Long> map3 = appleList.stream().collect(Collectors.groupingBy(Apple::getType,counting()));
         map3.forEach((key, value) -> System.out.println(key+":"+value));
+
+        System.out.println("------BigDecimal累加-----------------");
+        BigDecimal sum = appleList.stream().map(Apple::getPrice).reduce(BigDecimal.ZERO,BigDecimal::add);
+        System.out.println(sum);
     }
 }
