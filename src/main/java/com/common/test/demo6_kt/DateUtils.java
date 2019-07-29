@@ -208,7 +208,7 @@ public final class DateUtils {
     public static void main(String[] args) {
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 
-        Date date = addWeeks(new Date(),-1);
+        Date date = addWeeks(new Date(), -1);
         Date date1 = getBeginTimeOfDay(date);
         Date date2 = getEndTimeOfDay(date);
         String dat1 = sdf.format(date1);

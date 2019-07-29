@@ -12,7 +12,7 @@ public class IntegerTest {
         Integer i1 = new Integer(1);
         Integer i2 = new Integer(1);
         System.out.println(i1.equals(i2));
-        System.out.println(i1==i2);
+        System.out.println(i1 == i2);
 
         // 2.int和integer比较时只要两个变量的值相等，则结果相等，因为integer会自动拆箱为int类型
         System.out.println("-------2------");
@@ -25,7 +25,7 @@ public class IntegerTest {
         System.out.println("--------3----------");
         Integer i5 = new Integer(1);
         Integer i6 = 1;
-        System.out.println(i5.equals( i6));
+        System.out.println(i5.equals(i6));
         System.out.println(i5 == i6);
 
         /**
@@ -36,9 +36,9 @@ public class IntegerTest {
         System.out.println("----------4-----------");
         Integer i7 = 1;
         Integer i8 = 1;
-        System.out.println(i7== i8);
+        System.out.println(i7 == i8);
         Integer i9 = 128;
         Integer i10 = 128;
-        System.out.println(i9==i10);
+        System.out.println(i9 == i10);
     }
 }

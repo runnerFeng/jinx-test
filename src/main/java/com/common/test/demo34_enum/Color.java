@@ -6,6 +6,8 @@ package com.common.test.demo34_enum;
  * @Desc:
  */
 public enum Color {
-    RED(){},GREEN,BLUE,YELLOW;
-    public void test(){}
+    RED() {}, GREEN, BLUE, YELLOW;
+
+    public void test() {
+    }
 }

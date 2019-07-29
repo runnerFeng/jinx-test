@@ -24,7 +24,7 @@ public enum DatypeEnum {
     private Integer code;
     private String desc;
 
-    private DatypeEnum(int code, String desc){
+    private DatypeEnum(int code, String desc) {
         this.code = code;
         this.desc = desc;
     }

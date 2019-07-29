@@ -24,6 +24,7 @@ public class MD5Utils {
 
     /**
      * JAVA标准MD5算法，直接base64编码后的字符串
+     *
      * @param src
      * @return
      * @throws NoSuchAlgorithmException
@@ -36,6 +37,7 @@ public class MD5Utils {
 
     /**
      * JAVA标准SHA-1算法，直接base64编码后的字符串
+     *
      * @param input
      * @return
      * @throws NoSuchAlgorithmException
@@ -52,7 +54,7 @@ public class MD5Utils {
             MessageDigest md = MessageDigest.getInstance("SHA-1");
             byte[] bytes = md.digest(input);
             return byte2hex(bytes);
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
             return null;
         }
@@ -61,7 +63,7 @@ public class MD5Utils {
     public static String sha1(String input) {
         try {
             return sha1(input.getBytes("UTF-8"));
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
             return null;
         }
@@ -69,6 +71,7 @@ public class MD5Utils {
 
     /**
      * 将字节数组 BASE64 编码
+     *
      * @param b
      * @return
      * @throws UnsupportedEncodingException
@@ -99,14 +102,14 @@ public class MD5Utils {
         try {
             resultString = new String(origin);
             MessageDigest md = MessageDigest.getInstance("MD5");
-            resultString =  byte2hex(md.digest(resultString.getBytes("UTF-8"))) ;
+            resultString = byte2hex(md.digest(resultString.getBytes("UTF-8")));
 
         } catch (Exception exception) {
         }
         return resultString;
     }
 
-    private static final String hexDigits[] = { "0", "1", "2", "3", "4", "5",
+    private static final String hexDigits[] = {"0", "1", "2", "3", "4", "5",
             "6", "7", "8", "9", "a", "b", "c", "d", "e", "f" };
 
 
@@ -148,8 +151,8 @@ public class MD5Utils {
        /*return  ((short)(b[1]
                | b[0]<<8));*/
 
-        return (short)(b[1] & 0xff
-                | (b[0] & 0xff) << 8) ;
+        return (short) (b[1] & 0xff
+                | (b[0] & 0xff) << 8);
     }
 
     public static int byte2int(byte b[]) {
@@ -161,25 +164,25 @@ public class MD5Utils {
 
 
     public static long byte2long(byte b[]) {
-        return ((long)(b[7] & 0xff))
-                | ((long)(b[6] & 0xff)) << 8
-                | ((long)(b[5] & 0xff)) << 16
-                | ((long)(b[4] & 0xff)) << 24
-                | ((long)(b[3] & 0xff)) << 32
-                | ((long)(b[2] & 0xff)) << 40
-                | ((long)(b[1] & 0xff)) << 48
-                | ((long)(b[0] & 0xff))<< 56;
+        return ((long) (b[7] & 0xff))
+                | ((long) (b[6] & 0xff)) << 8
+                | ((long) (b[5] & 0xff)) << 16
+                | ((long) (b[4] & 0xff)) << 24
+                | ((long) (b[3] & 0xff)) << 32
+                | ((long) (b[2] & 0xff)) << 40
+                | ((long) (b[1] & 0xff)) << 48
+                | ((long) (b[0] & 0xff)) << 56;
     }
 
 
-    public static String printByte(byte[] b){
+    public static String printByte(byte[] b) {
         StringBuffer sb = new StringBuffer();
-        if(b==null || b.length==0) return "[]";
+        if (b == null || b.length == 0) return "[]";
         sb.append("[");
-        for(int i=0; i<b.length; i++){
+        for (int i = 0; i < b.length; i++) {
             sb.append(b[i]).append(",");
         }
-        sb.setCharAt(sb.length()-1, ']');
+        sb.setCharAt(sb.length() - 1, ']');
         return sb.toString();
     }
 
@@ -233,12 +236,12 @@ public class MD5Utils {
                 hexString.append(shaHex);
             }
             return hexString.toString();
- 
+
         } catch (NoSuchAlgorithmException e) {
             e.printStackTrace();
         }
         return "";
     }
- 
+
 
 }

@@ -6,14 +6,15 @@ package com.imooc.pattern.demo1_singleton;
  */
 public class Singleton {
 
-    private Singleton(){}
+    private Singleton() {
+    }
 
     /**
      * 饿汉模式
      */
     private static Singleton instance = new Singleton();
 
-    public static Singleton getInstance(){
+    public static Singleton getInstance() {
         return instance;
     }
 }

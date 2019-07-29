@@ -53,8 +53,9 @@ public class TrimmedAnnotationFormatterFactory implements AnnotationFormatterFac
         private final TrimmedType type;
 
         public TrimmerFormatter(TrimmedType type) {
-            if (type == null){
-                throw new NullPointerException();}
+            if (type == null) {
+                throw new NullPointerException();
+            }
             this.type = type;
         }
 
@@ -67,7 +68,7 @@ public class TrimmedAnnotationFormatterFactory implements AnnotationFormatterFac
         public String parse(String text, Locale locale) throws ParseException {
             text = text.trim();
             switch (type) {
-                case  ALL_WHITE_SPACE:
+                case ALL_WHITE_SPACE:
                     return PATTERN_WHITESPACES.matcher(text).replaceAll("");
                 case EXCEPT_LINE_BREAK:
                     return PATTERN_WHITESPACES_EXCEPT_LINE_BREAK
@@ -84,10 +85,10 @@ public class TrimmedAnnotationFormatterFactory implements AnnotationFormatterFac
 
     public static void main(String[] args) {
         String text = " j inx ";
-         Pattern PATTERN_WHITESPACES = Pattern.compile("\\s+");
-         String s = PATTERN_WHITESPACES.matcher(text).replaceAll("");
-        System.out.println("----"+text+"----");
-        System.out.println("----"+s+"----");
+        Pattern PATTERN_WHITESPACES = Pattern.compile("\\s+");
+        String s = PATTERN_WHITESPACES.matcher(text).replaceAll("");
+        System.out.println("----" + text + "----");
+        System.out.println("----" + s + "----");
     }
 
 }

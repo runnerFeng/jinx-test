@@ -13,9 +13,10 @@ public class ImageUtils {
 
     /**
      * 弹窗读取图片
+     *
      * @return data
      */
-    public byte[] selectFile(){
+    public byte[] selectFile() {
         byte[] data = null;
         final JFileChooser chooser = new JFileChooser();
         int returnVal = chooser.showOpenDialog(null);
@@ -29,13 +30,13 @@ public class ImageUtils {
             ByteArrayOutputStream bos = new ByteArrayOutputStream();
             byte[] byff = new byte[1024];
             int numByteRead = 0;
-            while((numByteRead = fis.read(byff)) != -1){
+            while ((numByteRead = fis.read(byff)) != -1) {
                 bos.write(byff, 0, numByteRead);
             }
             data = bos.toByteArray();
             bos.close();
             fis.close();
-        }catch (FileNotFoundException e){
+        } catch (FileNotFoundException e) {
             e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
@@ -47,6 +48,6 @@ public class ImageUtils {
         ImageUtils imageUtils = new ImageUtils();
         byte[] data = null;
         data = imageUtils.selectFile();
-        System.out.println("--"+data.length);
+        System.out.println("--" + data.length);
     }
 }

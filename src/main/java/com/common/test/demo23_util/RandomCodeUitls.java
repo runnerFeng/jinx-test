@@ -61,7 +61,7 @@ public final class RandomCodeUitls {
         char[] result = new char[length];
         for (int i = 0; i < length; i++) {
             Double index = Math.random() * Math.pow(10, base);
-            result[i] = chars[index.intValue()%CHARACTERS.length()];
+            result[i] = chars[index.intValue() % CHARACTERS.length()];
         }
         return new String(result);
     }

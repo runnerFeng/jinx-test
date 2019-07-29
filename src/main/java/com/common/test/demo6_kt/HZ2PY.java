@@ -98,7 +98,7 @@ public class HZ2PY {
             "zao", "ze", "zei", "zen", "zeng", "zha", "zhai", "zhan", "zhang",
             "zhao", "zhe", "zhen", "zheng", "zhi", "zhong", "zhou", "zhu",
             "zhua", "zhuai", "zhuan", "zhuang", "zhui", "zhun", "zhuo", "zi",
-            "zong", "zou", "zu", "zuan", "zui", "zun", "zuo"};
+            "zong", "zou", "zu", "zuan", "zui", "zun", "zuo" };
 
     public static int getChsAscii(String chs) {
         int asc = 0;

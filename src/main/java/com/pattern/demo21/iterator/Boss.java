@@ -15,7 +15,7 @@ public class Boss {
         }
 
         IProjectIterator iterator = iProject.iterator();
-        while (iterator.hasNext()){
+        while (iterator.hasNext()) {
             IProject project = (IProject) iterator.next();
             System.out.println(project.getProjectInfo());
         }

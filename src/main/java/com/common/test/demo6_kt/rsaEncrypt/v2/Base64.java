@@ -6,17 +6,17 @@ package com.common.test.demo6_kt.rsaEncrypt.v2;
  * Desc:
  */
 public class Base64 {
-    static private final int     BASELENGTH           = 128;
-    static private final int     LOOKUPLENGTH         = 64;
-    static private final int     TWENTYFOURBITGROUP   = 24;
-    static private final int     EIGHTBIT             = 8;
-    static private final int     SIXTEENBIT           = 16;
-    static private final int     FOURBYTE             = 4;
-    static private final int     SIGN                 = -128;
-    static private final char    PAD                  = '=';
-    static private final boolean fDebug               = false;
-    static final private byte[]  base64Alphabet       = new byte[BASELENGTH];
-    static final private char[]  lookUpBase64Alphabet = new char[LOOKUPLENGTH];
+    static private final int BASELENGTH = 128;
+    static private final int LOOKUPLENGTH = 64;
+    static private final int TWENTYFOURBITGROUP = 24;
+    static private final int EIGHTBIT = 8;
+    static private final int SIXTEENBIT = 16;
+    static private final int FOURBYTE = 4;
+    static private final int SIGN = -128;
+    static private final char PAD = '=';
+    static private final boolean fDebug = false;
+    static final private byte[] base64Alphabet = new byte[BASELENGTH];
+    static final private char[] lookUpBase64Alphabet = new char[LOOKUPLENGTH];
 
     static {
         for (int i = 0; i < BASELENGTH; ++i) {
@@ -256,8 +256,8 @@ public class Base64 {
     /**
      * remove WhiteSpace from MIME containing encoded Base64 data.
      *
-     * @param data  the byte array of base64 data (with WS)
-     * @return      the new length
+     * @param data the byte array of base64 data (with WS)
+     * @return the new length
      */
     private static int removeWhiteSpace(char[] data) {
         if (data == null) {

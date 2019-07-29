@@ -346,7 +346,7 @@ public class HttpClient {
         reqBody.put("smsContent", "test");
         reqBody.put("smsType", "5");
         System.out.println(reqBody.toJSONString());
-        System.out.println(HttpClient.newInstance().sendHttpPost(sms,reqBody.toJSONString(),null,null));
+        System.out.println(HttpClient.newInstance().sendHttpPost(sms, reqBody.toJSONString(), null, null));
     }
 
 }

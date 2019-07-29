@@ -120,6 +120,7 @@ public class Jackson {
             "        \"auditTime\": 0\n" +
             "    }\n" +
             "}";
+
     public static void main(String[] args) throws IOException {
 //测试通过json获取Object对象
         Object obj = getObjectByJson(jsonStr, "data.facade", TypeEnum.string); //层级递归String
@@ -127,10 +128,10 @@ public class Jackson {
         System.out.println(obj.toString());
         System.out.println(obj1);
         System.out.println(mapper.writeValueAsString(obj1));
-        System.out.println(mapper.readValue(mapper.writeValueAsString(obj1),IDCardInfo.class).getName());
-        System.out.println(((Map)obj1).get("name"));
+        System.out.println(mapper.readValue(mapper.writeValueAsString(obj1), IDCardInfo.class).getName());
+        System.out.println(((Map) obj1).get("name"));
 
-        System.out.println(getObjectByJson(jsonStr1,"",TypeEnum.map));
+        System.out.println(getObjectByJson(jsonStr1, "", TypeEnum.map));
 
     }
 

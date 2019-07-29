@@ -50,7 +50,8 @@ public class Test {
         String jsonFromArr = mapper.writeValueAsString(strArr);
         System.out.println(jsonFromArr);
         Student[] stuArr = mapper.readValue(jsonFromArr, Student[].class);
-        System.out.println(stuArr);System.out.println(stuArr);
+        System.out.println(stuArr);
+        System.out.println(stuArr);
         System.out.println((String) mapper.readValue(jsonFromArr, new TypeReference<List<Student>>() {
         }));
 

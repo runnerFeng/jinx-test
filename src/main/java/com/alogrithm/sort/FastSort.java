@@ -40,9 +40,9 @@ public class FastSort {
             if (i < j) {
                 a[j--] = a[i];
             }
-            a[i]=index;
-            sort(a,low,i-1);
-            sort(a,i+1,high);
+            a[i] = index;
+            sort(a, low, i - 1);
+            sort(a, i + 1, high);
         }
     }
 

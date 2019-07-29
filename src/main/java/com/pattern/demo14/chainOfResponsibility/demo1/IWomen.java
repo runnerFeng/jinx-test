@@ -6,5 +6,6 @@ package com.pattern.demo14.chainOfResponsibility.demo1;
  */
 public interface IWomen {
     int getTyp();
+
     String getRequest();
 }

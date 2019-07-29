@@ -55,11 +55,11 @@ public class AddressUtils {
             if (response.getStatusLine().getStatusCode() == HttpStatus.SC_OK) {
                 HttpEntity entity = response.getEntity();
                 String strResult = EntityUtils.toString(entity, "utf-8");
-                
-                if(strResult.indexOf("ret")==-1){
-                	strResult = "{\"ret\":-1}";
+
+                if (strResult.indexOf("ret") == -1) {
+                    strResult = "{\"ret\":-1}";
                 }
-                
+
                 jsonResult = JSONObject.parseObject(strResult);
             } else {
                 logger.error("get请求提交失败:" + url);

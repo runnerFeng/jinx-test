@@ -8,8 +8,8 @@ import com.imooc.pattern.demo3_strategy.impl.FlyWithRocket;
  */
 public class SpaceDuck extends Duck {
     public SpaceDuck() {
-    super();
-    super.setFlyingStrategy(new FlyWithRocket());
+        super();
+        super.setFlyingStrategy(new FlyWithRocket());
 
     }
 
@@ -18,7 +18,7 @@ public class SpaceDuck extends Duck {
         System.out.println("我头戴宇航头盔");
     }
 
-    public void quack(){
+    public void quack() {
         System.out.println("我通过无线电与你通信");
     }
 

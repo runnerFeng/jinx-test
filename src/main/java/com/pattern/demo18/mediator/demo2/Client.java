@@ -3,7 +3,7 @@ package com.pattern.demo18.mediator.demo2;
 /**
  * Created by jinx on 2017/9/4.
  * Desc:中介者模式适用于多个对象紧密耦合，耦合的标准可以这样来衡量:在类图中出现了蜘蛛网状结构，在这种情况下一定要考虑使用中介者模式，
- *      有利于把蜘蛛网梳理成一个星形结构，使原本复杂混乱关系变得清晰简单。
+ * 有利于把蜘蛛网梳理成一个星形结构，使原本复杂混乱关系变得清晰简单。
  */
 public class Client {
     public static void main(String[] args) {

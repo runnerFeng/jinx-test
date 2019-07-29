@@ -28,18 +28,18 @@ import java.util.*;
 public class ExcelUtil3 {
 
     public static void main(String[] args) {
-        User user1 =new User("jinx1","123","男");
-        User user2 =new User("jinx2","456","男");
-        User user3 =new User("jinx3","789","男");
-        List<User> userList  =new ArrayList<>();
+        User user1 = new User("jinx1", "123", "男");
+        User user2 = new User("jinx2", "456", "男");
+        User user3 = new User("jinx3", "789", "男");
+        List<User> userList = new ArrayList<>();
         userList.add(user1);
         userList.add(user2);
         userList.add(user3);
 
-         Map<String,Object> headNameMap = new HashMap<>();
-        headNameMap.put("用户名","username");
-        headNameMap.put("密码","password");
-        headNameMap.put("性别","gender");
+        Map<String, Object> headNameMap = new HashMap<>();
+        headNameMap.put("用户名", "username");
+        headNameMap.put("密码", "password");
+        headNameMap.put("性别", "gender");
 
         String fileName = "testFile";
 

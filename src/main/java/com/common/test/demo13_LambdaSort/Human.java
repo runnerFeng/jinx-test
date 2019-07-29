@@ -48,7 +48,7 @@ public class Human {
         }
 
         System.out.println("------------------------");
-            Comparator<Human> comparator = (h1,h2)-> Integer.compare(h1.getAge(),h2.getAge());
+        Comparator<Human> comparator = (h1, h2) -> Integer.compare(h1.getAge(), h2.getAge());
 //        list.sort(comparator);
         list.sort(comparator.reversed());
         for (Human human : list) {

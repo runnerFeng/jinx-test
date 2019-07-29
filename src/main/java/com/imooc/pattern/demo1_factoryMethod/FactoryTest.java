@@ -14,7 +14,7 @@ public class FactoryTest {
         Sender sender1 = senderFactory.produceMail();
         sender1.sender();
         //静态工厂模式
-        Sender sender2= SenderFactory.produceMail2();
+        Sender sender2 = SenderFactory.produceMail2();
         sender2.sender();
         //抽象工厂模式
         Provider provider = new MailSenderFactory();

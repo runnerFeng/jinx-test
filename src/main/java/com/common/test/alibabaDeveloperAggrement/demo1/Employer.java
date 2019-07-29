@@ -26,7 +26,7 @@ public class Employer {
     }
 
     public static void main(String[] args) {
-        List<Employer> list =  new ArrayList<>();
+        List<Employer> list = new ArrayList<>();
         list.add(new Employer(2));
         list.add(new Employer(1));
         list.add(new Employer(3));
@@ -36,7 +36,7 @@ public class Employer {
         Collections.sort(list, new Comparator<Employer>() {
             @Override
             public int compare(Employer o1, Employer o2) {
-                return o1.getAge()>o2.getAge()?1:-1;
+                return o1.getAge() > o2.getAge() ? 1 : -1;
             }
         });
         for (Employer employer : list) {

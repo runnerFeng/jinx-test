@@ -41,7 +41,7 @@ public class StringTest1 {
         System.out.println("---------------------------");
 
         /*堆*/
-        String s9 = new String("str")+new String("01");
+        String s9 = new String("str") + new String("01");
         s9.intern();
         /*常量池*/
         String s10 = "str01";
@@ -50,7 +50,7 @@ public class StringTest1 {
         System.out.println("----------------------------");
 
         /*堆*/
-        String s11 = new String("str")+new String("01");
+        String s11 = new String("str") + new String("01");
         /*常量池*/
         String s12 = "str01";
         s11.intern();

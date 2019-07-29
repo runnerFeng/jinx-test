@@ -6,6 +6,8 @@ package com.pattern.demo4.factory.simpleFactory;
  */
 public interface Human {
     void laugh();
+
     void cry();
+
     void talk();
 }

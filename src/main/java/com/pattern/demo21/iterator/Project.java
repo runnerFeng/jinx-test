@@ -12,7 +12,7 @@ public class Project implements IProject {
     private List<IProject> projectList = new ArrayList<>();
 
     private String name;
-    private int num ;
+    private int num;
     private int cost;
 
     public Project() {
@@ -26,15 +26,15 @@ public class Project implements IProject {
 
     @Override
     public void add(String name, int num, int cost) {
-        projectList.add(new Project(name,num,cost));
+        projectList.add(new Project(name, num, cost));
     }
 
     @Override
     public String getProjectInfo() {
         String info = "";
-        info = info+"项目名称是："+this.name;
-        info = info+"项目人数是："+this.num;
-        info = info+"项目花费是："+this.cost;
+        info = info + "项目名称是：" + this.name;
+        info = info + "项目人数是：" + this.num;
+        info = info + "项目花费是：" + this.cost;
         return info;
     }
 

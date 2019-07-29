@@ -17,7 +17,7 @@ public class CollectionsTest {
         List dest = new ArrayList(src1);
         System.out.println(dest.size());
         //浅拷贝
-        Collections.copy(dest,src1);
+        Collections.copy(dest, src1);
 
     }
 }

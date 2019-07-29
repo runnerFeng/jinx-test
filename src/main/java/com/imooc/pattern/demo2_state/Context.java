@@ -12,7 +12,7 @@ public class Context {
         this.state = state;
     }
 
-    public void request(String sampleParameter){
+    public void request(String sampleParameter) {
         state.handle(sampleParameter);
     }
 

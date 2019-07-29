@@ -15,17 +15,17 @@ public class StreamTest {
         for (int i = 0; i < 100; i++) {
             list.add(i);
         }
-        Long end1 = System.currentTimeMillis()-start1;
-        System.out.println("end1:"+end1+",cpu:"+Runtime.getRuntime().availableProcessors());
+        Long end1 = System.currentTimeMillis() - start1;
+        System.out.println("end1:" + end1 + ",cpu:" + Runtime.getRuntime().availableProcessors());
 
         Long start2 = System.currentTimeMillis();
         int result2 = list.stream().mapToInt(Integer::intValue).sum();
-        Long end2 = System.currentTimeMillis()-start2;
-        System.out.println("end2:"+end2+",result:"+result2);
+        Long end2 = System.currentTimeMillis() - start2;
+        System.out.println("end2:" + end2 + ",result:" + result2);
 
         Long start3 = System.currentTimeMillis();
         int result3 = list.parallelStream().mapToInt(Integer::intValue).sum();
-        Long end3 = System.currentTimeMillis()-start3;
-        System.out.println("end3:"+end3+",result3:"+result3);
+        Long end3 = System.currentTimeMillis() - start3;
+        System.out.println("end3:" + end3 + ",result3:" + result3);
     }
 }

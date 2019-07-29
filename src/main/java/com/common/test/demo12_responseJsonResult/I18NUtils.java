@@ -29,7 +29,7 @@ public class I18NUtils {
         l = locale;
     }
 
-    private static class SingletonContainer{
+    private static class SingletonContainer {
         private static I18NUtils instance = new I18NUtils();
     }
 

@@ -12,8 +12,8 @@ import java.util.regex.Pattern;
  * 检验身份证号和银行卡卡号
  *
  * @author liu lang
- *         <p>
- *         2016年12月5日上午9:33:54
+ * <p>
+ * 2016年12月5日上午9:33:54
  */
 public class VerifyUtil {
 
@@ -87,8 +87,8 @@ public class VerifyUtil {
 
     public static String IDCardValidate(String IDStr) {
         String errorInfo = "";// 记录错误信息
-        String[] ValCodeArr = {"1", "0", "X", "9", "8", "7", "6", "5", "4", "3", "2"};
-        String[] Wi = {"7", "9", "10", "5", "8", "4", "2", "1", "6", "3", "7", "9", "10", "5", "8", "4", "2"};
+        String[] ValCodeArr = {"1", "0", "X", "9", "8", "7", "6", "5", "4", "3", "2" };
+        String[] Wi = {"7", "9", "10", "5", "8", "4", "2", "1", "6", "3", "7", "9", "10", "5", "8", "4", "2" };
         String Ai = "";
         // ================ 号码的长度 15位或18位 ================
         if (IDStr.length() != 15 && IDStr.length() != 18) {

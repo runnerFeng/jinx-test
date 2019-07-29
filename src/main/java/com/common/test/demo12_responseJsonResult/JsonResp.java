@@ -34,7 +34,7 @@ public class JsonResp {
 
     public String getErrMsg() {
         //return I18NUtils.getInstance().getResource(2000);
-        if(result > 0 && StringUtils.isEmpty(errMsg)){
+        if (result > 0 && StringUtils.isEmpty(errMsg)) {
             errMsg = I18NUtils.getInstance().getResource(result);
         }
         return errMsg;
@@ -74,20 +74,20 @@ public class JsonResp {
     }
 
     public void setData(Object value) {
-        data=value;
+        data = value;
     }
 
-    public Object getData(){
+    public Object getData() {
         return data;
     }
 
-    public void setPagination(int pageNo, int pageSize, int totalCount ){
+    public void setPagination(int pageNo, int pageSize, int totalCount) {
         //总记录数
         this.setTotalCount(totalCount);
 
         //
         int totalPages;
-        if (pageSize <= 0){
+        if (pageSize <= 0) {
             totalPages = 1;
         } else {
             totalPages = (totalCount - 1) / pageSize + 1;
@@ -142,6 +142,7 @@ public class JsonResp {
 
         /**
          * 设置响应分页信息.
+         *
          * @param req 分页请求
          * @return 该响应对象.
          */
@@ -154,6 +155,7 @@ public class JsonResp {
 
         /**
          * 设置响应分页信息.
+         *
          * @param pageNo 当前页
          * @return 该响应对象.
          */
@@ -201,7 +203,7 @@ public class JsonResp {
         /**
          * 增加一个kv对到数据对象中.
          *
-         * @param key key
+         * @param key   key
          * @param value value
          * @return 返回该响应对象.
          */
@@ -224,7 +226,7 @@ public class JsonResp {
     }
 
     /**
-     *  列表类
+     * 列表类
      */
     public static class JList extends BaseResp {
 

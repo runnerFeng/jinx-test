@@ -9,7 +9,7 @@ import java.util.regex.Pattern;
 public class IpUtils {
     /*
      * 随机生成国内IP地址
-    */
+     */
     public static String getRandomIp() {
 
         //ip范围
@@ -33,7 +33,7 @@ public class IpUtils {
 
     /*
      * 将十进制转换成ip地址
-    */
+     */
     private static String num2ip(int ip) {
         int[] b = new int[4];
         String x = "";
@@ -50,34 +50,35 @@ public class IpUtils {
 
     /**
      * 从request对象中获取客户端真实的ip地址
+     *
      * @param request request对象
      * @return 客户端的IP地址
      */
     public static String getIpAddr(HttpServletRequest request) {
         String ip = request.getHeader("x-forwarded-for");
         //System.out.print("x-forwarded-for::::::::::::::" + ip);
-        if(StringUtils.isNotEmpty(ip) && ip.contains(",")){
+        if (StringUtils.isNotEmpty(ip) && ip.contains(",")) {
             // 如果通过多级反向代理，X-Forwarded-For的值不止一个，而是一串用逗号分隔的IP值，此时取X-Forwarded-For中第一个非unknown的有效IP字符串
             String[] array = ip.split(",");
             for (String element : array) {
                 if (isEffective(element)) {
-                   return element;
+                    return element;
                 }
             }
         }
-        if(isEffective(ip)) return ip;
+        if (isEffective(ip)) return ip;
 
         ip = request.getHeader("WL-Proxy-Client-IP");
         //System.out.print("WL-Proxy-Client-IP::::::::::::::" + ip);
-        if(isEffective(ip)) return ip;
+        if (isEffective(ip)) return ip;
 
         ip = request.getHeader("X-Real-IP");
         //System.out.print("X-Real-IP::::::::::::::" + ip);
-        if(isEffective(ip)) return ip;
+        if (isEffective(ip)) return ip;
 
         ip = request.getRemoteAddr();
         //System.out.print("RemoteAddr::::::::::::::" + ip);
-        if(isEffective(ip)) return ip;
+        if (isEffective(ip)) return ip;
 
         return ip;
     }
@@ -86,8 +87,7 @@ public class IpUtils {
     /**
      * 远程地址是否有效.
      *
-     * @param remoteAddr
-     *            远程地址
+     * @param remoteAddr 远程地址
      * @return true代表远程地址有效，false代表远程地址无效
      */
     private static boolean isEffective(final String remoteAddr) {
@@ -100,9 +100,9 @@ public class IpUtils {
 
     private static final Pattern IPV4_PATTERN =
             Pattern.compile("^(1\\d{2}|2[0-4]\\d|25[0-5]|[1-9]\\d|[1-9])\\."
-                            +"(00?\\d|1\\d{2}|2[0-4]\\d|25[0-5]|[1-9]\\d|\\d)\\."
-                            +"(00?\\d|1\\d{2}|2[0-4]\\d|25[0-5]|[1-9]\\d|\\d)\\."
-                            +"(00?\\d|1\\d{2}|2[0-4]\\d|25[0-5]|[1-9]\\d|\\d)$");
+                    + "(00?\\d|1\\d{2}|2[0-4]\\d|25[0-5]|[1-9]\\d|\\d)\\."
+                    + "(00?\\d|1\\d{2}|2[0-4]\\d|25[0-5]|[1-9]\\d|\\d)\\."
+                    + "(00?\\d|1\\d{2}|2[0-4]\\d|25[0-5]|[1-9]\\d|\\d)$");
 
     private static boolean isIpv4(String ipAddress) {
         return IPV4_PATTERN.matcher(ipAddress).matches();
@@ -117,7 +117,7 @@ public class IpUtils {
     }
 
     public static void main(String[] args) throws InterruptedException {
-        for(int i=0; i<10; i++) {
+        for (int i = 0; i < 10; i++) {
             System.out.println(IpUtils.getRandomIp());
             TimeUnit.SECONDS.sleep(2);
         }

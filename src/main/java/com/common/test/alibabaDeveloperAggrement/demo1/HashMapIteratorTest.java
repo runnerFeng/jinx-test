@@ -10,13 +10,13 @@ import java.util.Map;
  */
 public class HashMapIteratorTest {
     public static void main(String[] args) {
-        Map map = new HashMap<Integer,String>();
+        Map map = new HashMap<Integer, String>();
         for (int i = 0; i < 1000000; i++) {
-            map.put(i,"value:"+i);
+            map.put(i, "value:" + i);
         }
 
-        long startTime  =System.currentTimeMillis();
-        System.out.println("startTime:"+startTime);
+        long startTime = System.currentTimeMillis();
+        System.out.println("startTime:" + startTime);
 
         //返回value
 //        for (Object o : map.values()) {
@@ -41,10 +41,10 @@ public class HashMapIteratorTest {
 //                System.out.println(next);
 //        }
 
-        map.forEach((key,value)->{
-            System.out.println(key+":"+value);
+        map.forEach((key, value) -> {
+            System.out.println(key + ":" + value);
         });
 
-        System.out.println("spendTime:"+(System.currentTimeMillis()-startTime));
+        System.out.println("spendTime:" + (System.currentTimeMillis() - startTime));
     }
 }

@@ -21,13 +21,14 @@ public class HttpRequestUtils {
 
     /**
      * 判断是否为Ajax请求
-     * @param request   HttpServletRequest
-     * @return  是true, 否false
+     *
+     * @param request HttpServletRequest
+     * @return 是true, 否false
      */
     public static boolean isJsonContent(ServletRequest request) {
-        String contentType = ((HttpServletRequest)request).getHeader("Content-type");
-        if(StringUtils.isNotBlank(contentType)){
-            if(StringUtils.indexOfIgnoreCase(contentType, "application/json")>=0){
+        String contentType = ((HttpServletRequest) request).getHeader("Content-type");
+        if (StringUtils.isNotBlank(contentType)) {
+            if (StringUtils.indexOfIgnoreCase(contentType, "application/json") >= 0) {
                 return true;
             }
         }
@@ -43,7 +44,7 @@ public class HttpRequestUtils {
         request.getQueryString()action=idp.sptopn
      */
     public static boolean isHTML(ServletRequest request) {
-        HttpServletRequest req = (HttpServletRequest)request;
+        HttpServletRequest req = (HttpServletRequest) request;
         String servletPath = req.getServletPath();
         String contextType = req.getContentType();
         String method = req.getMethod();
@@ -54,10 +55,10 @@ public class HttpRequestUtils {
         String urlExtension = StringUtils.substringAfterLast(servletPath, ".");
         return ("HTML".equalsIgnoreCase(urlExtension) || "HTM".equalsIgnoreCase(urlExtension))
                 && "GET".equalsIgnoreCase(method)
-                && StringUtils.containsIgnoreCase(contextType,"text/html");
+                && StringUtils.containsIgnoreCase(contextType, "text/html");
     }
 
-    public static String readJsonReq(ServletRequest request){
+    public static String readJsonReq(ServletRequest request) {
         BufferedReader br = null;
         try {
             br = new BufferedReader(new InputStreamReader(request.getInputStream(), "utf-8"));
@@ -70,7 +71,7 @@ public class HttpRequestUtils {
         } catch (IOException e) {
             e.printStackTrace();
         } finally {
-            if(br!=null){
+            if (br != null) {
                 try {
                     br.close();
                 } catch (IOException e) {
@@ -81,8 +82,8 @@ public class HttpRequestUtils {
         return "";
     }
 
-    public static void writeJsonResp(JsonResp resp, ServletResponse response){
-        HttpServletResponse httpResponse = (HttpServletResponse)response;
+    public static void writeJsonResp(JsonResp resp, ServletResponse response) {
+        HttpServletResponse httpResponse = (HttpServletResponse) response;
         httpResponse.setCharacterEncoding("UTF-8");
         httpResponse.setContentType("application/json; charset=utf-8");
         httpResponse.setStatus(HttpStatus.SC_OK);
@@ -101,8 +102,8 @@ public class HttpRequestUtils {
         }
     }
 
-    public static void writeJsonResp(JsonResp resp, ServletResponse response, int httpStatusCode){
-        HttpServletResponse httpResponse = (HttpServletResponse)response;
+    public static void writeJsonResp(JsonResp resp, ServletResponse response, int httpStatusCode) {
+        HttpServletResponse httpResponse = (HttpServletResponse) response;
         httpResponse.setCharacterEncoding("UTF-8");
         httpResponse.setContentType("application/json; charset=utf-8");
         httpResponse.setStatus(httpStatusCode);
@@ -121,7 +122,7 @@ public class HttpRequestUtils {
         }
     }
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
         System.out.println(isHTML("/idpstat.html", "get", "text/html;charset=utf-8"));
         System.out.println(isHTML("/idpstat.htm", "get", "text/html;charset=utf-8"));
         System.out.println(isHTML("/idpstat.html", "get", "text/html;charset=utf-8"));

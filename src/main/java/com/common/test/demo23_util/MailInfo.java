@@ -49,7 +49,7 @@ public class MailInfo {
     }
 
     public void addAttachment(EmailAttachment attachment) {
-        if(this.attachments==null){
+        if (this.attachments == null) {
             this.attachments = new ArrayList<>();
         }
         this.attachments.add(attachment);

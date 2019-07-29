@@ -7,7 +7,7 @@ package com.imooc.pattern.demo3_strategy;
 public abstract class Duck {
 
 
-    public void quack(){
+    public void quack() {
         System.out.println("嘎嘎嘎");
     }
 
@@ -15,7 +15,7 @@ public abstract class Duck {
 
     private FlyingStrategy flyingStrategy;
 
-    public void fly(){
+    public void fly() {
         flyingStrategy.performFly();
     }
 

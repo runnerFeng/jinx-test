@@ -27,6 +27,6 @@ public class TrimFormatter implements Formatter<String> {
 
     public static void main(String[] args) {
         String s = PATTERN_WHITESPACES.matcher("j inx ").replaceAll("");
-        System.out.println("----"+s+"----");
+        System.out.println("----" + s + "----");
     }
 }

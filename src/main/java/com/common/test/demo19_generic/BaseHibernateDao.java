@@ -9,7 +9,7 @@ import java.lang.reflect.Type;
  * @date 2018/2/5 17:30
  * Desc:getGenericSuperclass
  */
-public class BaseHibernateDao<T,ID extends Serializable>{
+public class BaseHibernateDao<T, ID extends Serializable> {
     private Class<T> clazz;
 
     public BaseHibernateDao() {
@@ -17,15 +17,15 @@ public class BaseHibernateDao<T,ID extends Serializable>{
         System.out.println(getClass());
         Type genericSuperclass = getClass().getGenericSuperclass();
         //是否是参数化类型，即泛型
-        if (genericSuperclass instanceof ParameterizedType){
+        if (genericSuperclass instanceof ParameterizedType) {
             //获取泛型的参数列表中的第一个
             this.clazz = (Class<T>) ((ParameterizedType) genericSuperclass).getActualTypeArguments()[0];
-        }else {
+        } else {
             this.clazz = (Class<T>) genericSuperclass;
         }
     }
 
-    public Class<T> getClazz(){
+    public Class<T> getClazz() {
         return this.clazz;
     }
 

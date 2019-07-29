@@ -10,12 +10,12 @@ import lombok.SneakyThrows;
 public class SneakyThrowsTest {
 
     public static void main(String[] args) {
-     throwEeception();
+        throwEeception();
         System.out.println(111);
     }
 
     @SneakyThrows
-    public static void throwEeception(){
+    public static void throwEeception() {
         String s = null;
         String[] split = s.split(",");
         System.out.println(split);

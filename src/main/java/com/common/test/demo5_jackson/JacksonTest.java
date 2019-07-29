@@ -13,6 +13,7 @@ import java.util.List;
  */
 public class JacksonTest {
     private static final ObjectMapper OBJECT_MAPPER = new ObjectMapper();
+
     public static void main(String[] args) throws IOException {
 //        String jsonStr = "{\"message\":\"成功\",\"ret\":0,\"tdyOpenPrice\":\"20\",\"transDate\":\"20170122\",\"ydyClsPrice\":\"20\"}";
 //        String result = (String) ((Map) JSON.parse(jsonStr)).get("ydyClsPrice");
@@ -42,7 +43,7 @@ public class JacksonTest {
 
 //        itemsList.forEach(System.out::println);
         for (Items items : itemsList) {
-            System.out.println(items.getIndusty()+"------"+"stockCode"+items.getStockCode()+"----"+"manageUnit"+items.getManagedUnit()+"-------"+"stockNature"+items.getStockNature());
+            System.out.println(items.getIndusty() + "------" + "stockCode" + items.getStockCode() + "----" + "manageUnit" + items.getManagedUnit() + "-------" + "stockNature" + items.getStockNature());
         }
     }
 

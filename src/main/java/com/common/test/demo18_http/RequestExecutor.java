@@ -15,11 +15,10 @@ import java.io.IOException;
 public interface RequestExecutor<T, E> {
 
     /**
-     *
      * @param httpclient 传入的httpClient
-     * @param httpProxy http代理对象，如果没有配置代理则为空
-     * @param uri uri
-     * @param data 数据
+     * @param httpProxy  http代理对象，如果没有配置代理则为空
+     * @param uri        uri
+     * @param data       数据
      * @return
      * @throws ClientProtocolException
      * @throws IOException

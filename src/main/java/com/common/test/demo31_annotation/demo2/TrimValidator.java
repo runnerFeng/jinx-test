@@ -10,11 +10,14 @@ import java.lang.annotation.*;
  */
 @Documented
 @Retention(RetentionPolicy.RUNTIME)
-@Target({ElementType.PARAMETER,ElementType.FIELD})
+@Target({ElementType.PARAMETER, ElementType.FIELD})
 public @interface TrimValidator {
     String values();
+
     // 提示内容
     String message() default "flag不存在";
+
     Class<?>[] groups() default {};
+
     Class<? extends Payload>[] payload() default {};
 }

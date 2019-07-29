@@ -70,10 +70,11 @@ public class ExcelUtils {
 
     /**
      * 写入excel 表中
+     *
      * @param fileName 名称
-     * @param list 对象
+     * @param list     对象
      */
-    public static void writeExcel(String fileName,List<Object[]> list) {
+    public static void writeExcel(String fileName, List<Object[]> list) {
         WritableWorkbook wwb = null;
         try {
             // 首先要使用Workbook类的工厂方法创建一个可写入的工作薄(Workbook)对象
@@ -88,8 +89,8 @@ public class ExcelUtils {
 
             // 下面开始添加单元格
             for (int i = 0; i < list.size(); i++) {
-                Object[] obj=list.get(i);
-                for (int j = 0; j <obj.length; j++) {
+                Object[] obj = list.get(i);
+                for (int j = 0; j < obj.length; j++) {
                     // 这里需要注意的是，在Excel中，第一个参数表示列，第二个表示行
                     Label labelC = new Label(j, i, obj[j].toString());
                     try {
@@ -117,8 +118,8 @@ public class ExcelUtils {
 
     public static void main(String[] args) {
         JSONObject jsonObject = new JSONObject();
-        jsonObject.put("1","hk");
-        jsonObject.put("2","cn");
+        jsonObject.put("1", "hk");
+        jsonObject.put("2", "cn");
         List<JSONObject> list = new ArrayList<>();
         list.add(jsonObject);
         /*final JFileChooser chooser = new JFileChooser();

@@ -18,9 +18,9 @@
         </constructor>
     </resultMap>
     <sql id="Base_Column_List">
-    id, sec_code, sec_name, industry, min_amount_scale, max_amount_scale, max_amount_last_date, 
-    min_amount_last_date, purpose, create_time, update_time, user_id
-  </sql>
+        id, sec_code, sec_name, industry, min_amount_scale, max_amount_scale, max_amount_last_date,
+        min_amount_last_date, purpose, create_time, update_time, user_id
+    </sql>
     <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long">
         select
         <include refid="Base_Column_List"/>
@@ -28,22 +28,23 @@
         where id = #{id,jdbcType=BIGINT}
     </select>
     <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
-    delete from t_financier_subscribe
-    where id = #{id,jdbcType=BIGINT}
-  </delete>
+        delete from t_financier_subscribe
+        where id = #{id,jdbcType=BIGINT}
+    </delete>
     <insert id="insert" parameterType="com.common.test.demo15_mybatis.mybatisGenerator.model.FinancierSubscribe">
-    insert into t_financier_subscribe (id, sec_code, sec_name, 
-      industry, min_amount_scale, max_amount_scale, 
-      max_amount_last_date, min_amount_last_date, purpose, 
-      create_time, update_time, user_id
-      )
-    values (#{id,jdbcType=BIGINT}, #{secCode,jdbcType=VARCHAR}, #{secName,jdbcType=VARCHAR}, 
-      #{industry,jdbcType=VARCHAR}, #{minAmountScale,jdbcType=BIGINT}, #{maxAmountScale,jdbcType=BIGINT}, 
-      #{maxAmountLastDate,jdbcType=INTEGER}, #{minAmountLastDate,jdbcType=INTEGER}, #{purpose,jdbcType=VARCHAR}, 
-      #{createTime,jdbcType=TIMESTAMP}, #{updateTime,jdbcType=TIMESTAMP}, #{userId,jdbcType=VARCHAR}
-      )
-  </insert>
-    <insert id="insertSelective" parameterType="com.common.test.demo15_mybatis.mybatisGenerator.model.FinancierSubscribe">
+        insert into t_financier_subscribe (id, sec_code, sec_name,
+        industry, min_amount_scale, max_amount_scale,
+        max_amount_last_date, min_amount_last_date, purpose,
+        create_time, update_time, user_id
+        )
+        values (#{id,jdbcType=BIGINT}, #{secCode,jdbcType=VARCHAR}, #{secName,jdbcType=VARCHAR},
+        #{industry,jdbcType=VARCHAR}, #{minAmountScale,jdbcType=BIGINT}, #{maxAmountScale,jdbcType=BIGINT},
+        #{maxAmountLastDate,jdbcType=INTEGER}, #{minAmountLastDate,jdbcType=INTEGER}, #{purpose,jdbcType=VARCHAR},
+        #{createTime,jdbcType=TIMESTAMP}, #{updateTime,jdbcType=TIMESTAMP}, #{userId,jdbcType=VARCHAR}
+        )
+    </insert>
+    <insert id="insertSelective"
+            parameterType="com.common.test.demo15_mybatis.mybatisGenerator.model.FinancierSubscribe">
         insert into t_financier_subscribe
         <trim prefix="(" suffix=")" suffixOverrides=",">
             <if test="id != null">
@@ -162,19 +163,20 @@
         </set>
         where id = #{id,jdbcType=BIGINT}
     </update>
-    <update id="updateByPrimaryKey" parameterType="com.common.test.demo15_mybatis.mybatisGenerator.model.FinancierSubscribe">
-    update t_financier_subscribe
-    set sec_code = #{secCode,jdbcType=VARCHAR},
-      sec_name = #{secName,jdbcType=VARCHAR},
-      industry = #{industry,jdbcType=VARCHAR},
-      min_amount_scale = #{minAmountScale,jdbcType=BIGINT},
-      max_amount_scale = #{maxAmountScale,jdbcType=BIGINT},
-      max_amount_last_date = #{maxAmountLastDate,jdbcType=INTEGER},
-      min_amount_last_date = #{minAmountLastDate,jdbcType=INTEGER},
-      purpose = #{purpose,jdbcType=VARCHAR},
-      create_time = #{createTime,jdbcType=TIMESTAMP},
-      update_time = #{updateTime,jdbcType=TIMESTAMP},
-      user_id = #{userId,jdbcType=VARCHAR}
-    where id = #{id,jdbcType=BIGINT}
-  </update>
+    <update id="updateByPrimaryKey"
+            parameterType="com.common.test.demo15_mybatis.mybatisGenerator.model.FinancierSubscribe">
+        update t_financier_subscribe
+        set sec_code = #{secCode,jdbcType=VARCHAR},
+        sec_name = #{secName,jdbcType=VARCHAR},
+        industry = #{industry,jdbcType=VARCHAR},
+        min_amount_scale = #{minAmountScale,jdbcType=BIGINT},
+        max_amount_scale = #{maxAmountScale,jdbcType=BIGINT},
+        max_amount_last_date = #{maxAmountLastDate,jdbcType=INTEGER},
+        min_amount_last_date = #{minAmountLastDate,jdbcType=INTEGER},
+        purpose = #{purpose,jdbcType=VARCHAR},
+        create_time = #{createTime,jdbcType=TIMESTAMP},
+        update_time = #{updateTime,jdbcType=TIMESTAMP},
+        user_id = #{userId,jdbcType=VARCHAR}
+        where id = #{id,jdbcType=BIGINT}
+    </update>
 </mapper>

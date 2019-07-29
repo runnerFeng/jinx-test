@@ -6,7 +6,9 @@ package com.pattern.demo21.iterator;
  * Desc:
  */
 public interface IProject {
-    void add(String name,int num,int cost);
+    void add(String name, int num, int cost);
+
     String getProjectInfo();
+
     IProjectIterator iterator();
 }

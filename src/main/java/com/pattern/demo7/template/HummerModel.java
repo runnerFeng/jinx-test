@@ -26,7 +26,7 @@ public abstract class HummerModel {
     final public void run() {
         this.start();
 
-        if(this.isAlarm()){
+        if (this.isAlarm()) {
             this.alarm();
         }
         this.engineBoom();

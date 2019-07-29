@@ -20,7 +20,7 @@ public class ProjectIterator implements IProjectIterator {
     @Override
     public boolean hasNext() {
         boolean b = true;
-        if (this.currentItem>=iProjectList.size()||this.iProjectList.get(currentItem)==null){
+        if (this.currentItem >= iProjectList.size() || this.iProjectList.get(currentItem) == null) {
             b = false;
         }
         return b;

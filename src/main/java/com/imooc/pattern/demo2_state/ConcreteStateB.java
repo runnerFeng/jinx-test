@@ -7,6 +7,6 @@ package com.imooc.pattern.demo2_state;
 public class ConcreteStateB implements State {
 
     public void handle(String sampleParameter) {
-        System.out.println("ConcreteStateB handle" +sampleParameter);
+        System.out.println("ConcreteStateB handle" + sampleParameter);
     }
 }

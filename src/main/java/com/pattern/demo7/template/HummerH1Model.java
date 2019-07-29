@@ -6,7 +6,8 @@ package com.pattern.demo7.template;
  */
 public class HummerH1Model extends HummerModel {
 
-    private boolean alarmFlag =false;
+    private boolean alarmFlag = false;
+
     @Override
     protected void start() {
         System.out.println("H1型号启动");
@@ -34,7 +35,7 @@ public class HummerH1Model extends HummerModel {
     }
 
     //提供set方法，由客户端控制要不要响
-    public void setAlarmFalg(boolean flag){
+    public void setAlarmFalg(boolean flag) {
         this.alarmFlag = flag;
     }
 }

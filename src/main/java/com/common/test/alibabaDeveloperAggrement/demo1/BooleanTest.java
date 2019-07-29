@@ -7,6 +7,7 @@ package com.common.test.alibabaDeveloperAggrement.demo1;
  */
 public class BooleanTest {
     private boolean isDelete;
+
     //boolean类型的变量定义时不要加is,否则部分框架解析会出现序列化错误
     public boolean isDelete() {
         return isDelete;

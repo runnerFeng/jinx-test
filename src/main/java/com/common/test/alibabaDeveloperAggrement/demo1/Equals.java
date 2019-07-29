@@ -89,6 +89,5 @@ public class Equals {
         System.out.println("u1 u2------------------------------");
 
 
-
     }
 }

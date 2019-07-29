@@ -20,7 +20,7 @@ public class VcfData {
     /**
      * 参考串碱基
      */
-    private String ref ;
+    private String ref;
     /**
      * 变异后的碱基
      */

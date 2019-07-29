@@ -7,7 +7,7 @@ import java.lang.annotation.*;
  * @date 2018/9/13 11:20
  * Desc:
  */
-@Target(value = {ElementType.FIELD, ElementType.METHOD,ElementType.PARAMETER})
+@Target(value = {ElementType.FIELD, ElementType.METHOD, ElementType.PARAMETER})
 @Documented
 @Retention(RetentionPolicy.RUNTIME)
 public @interface Trim {

@@ -68,7 +68,7 @@ public class FrontUserListExcelWriteStyle<T> extends AbstractExcelWrite<T> {
             Row dataRow = excelWrite.getCurrentSheet().createRow(excelWrite.getCurrentRow());
             dataRow.setHeight(excelWrite.getDeal().setHeight());
             // 得到要插入的每一条记录
-            String [] data = excelWrite.getDeal().dealBean(t);
+            String[] data = excelWrite.getDeal().dealBean(t);
             for (int k = 0; k < data.length; k++) {
                 // 在一行内循环
                 Cell cell = dataRow.createCell(k);

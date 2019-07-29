@@ -36,84 +36,83 @@ public class DateUtils {
 
     /**
      * 查询开始时间
+     *
      * @param source
      * @return
      */
-    public static Date getStartDate(String source){
-        if(StringUtils.isNotBlank(source)){
+    public static Date getStartDate(String source) {
+        if (StringUtils.isNotBlank(source)) {
             source = source.trim() + " 00:00:00";
             return parseDateTime(source);
         }
         return null;
     }
 
-    public static Date getStartDate(Date date){
+    public static Date getStartDate(Date date) {
         String source = dfDate.format(date);
         return getStartDate(source);
     }
 
     /**
      * 查询结束时间
+     *
      * @param source
      * @return
      */
-    public static Date getEndDate(String source){
-        if(StringUtils.isNotBlank(source)){
+    public static Date getEndDate(String source) {
+        if (StringUtils.isNotBlank(source)) {
             source = source.trim() + " 23:59:59";
             return parseDateTime(source);
         }
         return null;
     }
 
-    public static Date getEndDate(Date date){
+    public static Date getEndDate(Date date) {
         String source = dfDate.format(date);
         return getEndDate(source);
     }
 
     /**
-     *
      * @param source
      * @return
      */
-    public static Date parseDateTime(String source){
-        if(StringUtils.isBlank(source)){
+    public static Date parseDateTime(String source) {
+        if (StringUtils.isBlank(source)) {
             return null;
         }
         Date date = null;
         try {
             date = dfDateTime.parse(source.trim());
         } catch (ParseException e) {
-            log.error("解析时间异常：["+source+"] " + e.getMessage());
+            log.error("解析时间异常：[" + source + "] " + e.getMessage());
         }
         return date;
     }
 
     /**
-     *
      * @param source
      * @return
      */
-    public static Date parseDate(String source){
-        if(StringUtils.isBlank(source)){
+    public static Date parseDate(String source) {
+        if (StringUtils.isBlank(source)) {
             return null;
         }
         Date date = null;
         try {
             date = dfDate.parse(source.trim());
         } catch (ParseException e) {
-            log.error("解析时间异常：["+source+"] " + e.getMessage());
+            log.error("解析时间异常：[" + source + "] " + e.getMessage());
         }
         return date;
     }
 
     /**
-     *
      * @param source
      * @param pattern
      * @return
      */
-    public static Date parseDate(String source, String pattern){
-        if(StringUtils.isBlank(source)){
+    public static Date parseDate(String source, String pattern) {
+        if (StringUtils.isBlank(source)) {
             return null;
         }
         Date date = null;
@@ -121,25 +120,27 @@ public class DateUtils {
             DateFormat dateFormat = new SimpleDateFormat(pattern);
             date = dateFormat.parse(source.trim());
         } catch (ParseException e) {
-            log.error("解析时间异常：["+source+"] " + e.getMessage());
+            log.error("解析时间异常：[" + source + "] " + e.getMessage());
         }
         return date;
     }
 
     /**
      * 根据当前时间生成序列号
+     *
      * @return
      */
-    public synchronized static String serialNumber(){
+    public synchronized static String serialNumber() {
         return serialFormatter.format(new Date());
     }
 
     /**
      * 月第一天
+     *
      * @param date
      * @return
      */
-    public static Date getMonthStartDate(Date date){
+    public static Date getMonthStartDate(Date date) {
         Date d = new Date(date.getTime());
         d = setHours(d, 0);
         d = setMinutes(d, 0);
@@ -149,10 +150,11 @@ public class DateUtils {
 
     /**
      * 月最后一天
+     *
      * @param date
      * @return
      */
-    public static Date getMonthEndDate(Date date){
+    public static Date getMonthEndDate(Date date) {
         GregorianCalendar c = new GregorianCalendar();
         c.setTime(date);
         int maxMonth = c.getActualMaximum(Calendar.DAY_OF_MONTH);
@@ -165,10 +167,11 @@ public class DateUtils {
 
     /**
      * 当前星期的第一天
+     *
      * @param date
      * @return
      */
-    public static Date getWeekStartDate(Date date){
+    public static Date getWeekStartDate(Date date) {
         GregorianCalendar c = new GregorianCalendar(Locale.CHINA);
         c.setTime(date);
         c.setFirstDayOfWeek(RANGE_WEEK_MONDAY);
@@ -181,10 +184,11 @@ public class DateUtils {
 
     /**
      * 当前星期的最后一天
+     *
      * @param date
      * @return
      */
-    public static Date getWeekEndDate(Date date){
+    public static Date getWeekEndDate(Date date) {
         GregorianCalendar c = new GregorianCalendar(Locale.CHINA);
         c.setTime(date);
         c.setFirstDayOfWeek(RANGE_WEEK_MONDAY);
@@ -195,8 +199,8 @@ public class DateUtils {
         return c.getTime();
     }
 
-    public static Date getLessonDate(String source){
-        if(StringUtils.isBlank(source)){
+    public static Date getLessonDate(String source) {
+        if (StringUtils.isBlank(source)) {
             return null;
         }
         Date date = null;
@@ -210,12 +214,13 @@ public class DateUtils {
 
     /**
      * 两个时间之间相差的月
+     *
      * @param startDate
      * @param endDate
      * @return
      * @throws ParseException
      */
-    public static int getMonthSpace(Date startDate, Date endDate){
+    public static int getMonthSpace(Date startDate, Date endDate) {
 
         int result = 0;
 
@@ -233,6 +238,7 @@ public class DateUtils {
 
     /**
      * 日期间隔多少天
+     *
      * @param early
      * @param late
      * @return
@@ -257,7 +263,7 @@ public class DateUtils {
         return days;
     }
 
-    public static void main(String [] args){
+    public static void main(String[] args) {
         try {
             Date currentDate = dfDateTime.parse("2016-10-16 14:19:40");
             Date startDate = DateUtils.getWeekStartDate(currentDate);

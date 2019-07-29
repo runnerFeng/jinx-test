@@ -22,11 +22,11 @@ public class TestStream {
         person.getAddresses().add(address2);
 
 
-        String res=toXML(person);
+        String res = toXML(person);
 //        toEntity(res);
     }
 
-    public static void toEntity(String inputXML){
+    public static void toEntity(String inputXML) {
         XStream xs = new XStream();
 
 //        这句和@XStreamAlias("person")等效
@@ -38,15 +38,14 @@ public class TestStream {
 //        这句和@XStreamAsAttribute()
 //        xs.useAttributeFor(Person.class, "name");
         //注册使用了注解的VO
-        xs.processAnnotations(new Class[]{Person.class,Address.class});
-        Person person = (Person)xs.fromXML(inputXML);
-        System.out.println(person.getAddresses().get(0).getHouseNo()+person.getName());
-
+        xs.processAnnotations(new Class[]{Person.class, Address.class});
+        Person person = (Person) xs.fromXML(inputXML);
+        System.out.println(person.getAddresses().get(0).getHouseNo() + person.getName());
 
 
     }
 
-    public static <T extends Object> String toXML(T t){
+    public static <T extends Object> String toXML(T t) {
         XStream xStream = new XStream();
 
 //        Class<?> cls = t.getClass();
@@ -71,9 +70,9 @@ public class TestStream {
 //        xStream.addImplicitCollection(Person.class, "addresses");
 //        xStream.useAttributeFor(Person.class,"name");
         //注册使用了注解的VO
-        xStream.processAnnotations(new Class[]{Person.class,Address.class});
+        xStream.processAnnotations(new Class[]{Person.class, Address.class});
 //        xStream.autodetectAnnotations(true);//自动检测注解
-        String xml = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>"+xStream.toXML(t);
+        String xml = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>" + xStream.toXML(t);
 
         System.out.println(xml);
         return xml;

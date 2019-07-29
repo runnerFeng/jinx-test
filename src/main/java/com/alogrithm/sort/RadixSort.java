@@ -54,7 +54,7 @@ public class RadixSort {
      * @param exp
      */
     public static void countSort(int[] a, int exp) {
-        int i, output[] = new int[a.length],buckets[] = new int[10];
+        int i, output[] = new int[a.length], buckets[] = new int[10];
         // 将数据出现的次数存储在buckets[]中
         for (i = 0; i < a.length; i++) {
             buckets[(a[i] / exp) % 10]++;

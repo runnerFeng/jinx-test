@@ -26,7 +26,7 @@ public class ProtoType implements Cloneable, Serializable {
 
     //深度复制
     public Object deepClone() throws IOException, ClassNotFoundException {
-         /* 写入当前对象的二进制流 */
+        /* 写入当前对象的二进制流 */
         ByteArrayOutputStream bos = new ByteArrayOutputStream();
         ObjectOutputStream oos = new ObjectOutputStream(bos);
         oos.writeObject(this);

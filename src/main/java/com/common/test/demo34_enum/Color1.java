@@ -6,8 +6,8 @@ package com.common.test.demo34_enum;
  * @Desc:
  */
 public class Color1 {
-    public static final Color1 RED = new Color1(1){
-        public void test(){
+    public static final Color1 RED = new Color1(1) {
+        public void test() {
 
         }
     };

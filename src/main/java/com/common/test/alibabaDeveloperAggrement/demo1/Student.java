@@ -21,17 +21,17 @@ public class Student {
     }
 
     public static void main(String[] args) {
-        Student student1 = new Student(1,"yi");
-        Student student2 = new Student(1,"er");
-        Student student3 = new Student(2,"san");
-        Student student4 = new Student(2,"san");
+        Student student1 = new Student(1, "yi");
+        Student student2 = new Student(1, "er");
+        Student student3 = new Student(2, "san");
+        Student student4 = new Student(2, "san");
         Set<Student> studentSet = new HashSet<>();
         studentSet.add(student1);
         studentSet.add(student2);
         studentSet.add(student3);
         studentSet.add(student4);
         for (Student student : studentSet) {
-            System.out.println(student.getId()+"---"+student.getName());
+            System.out.println(student.getId() + "---" + student.getName());
         }
 
     }

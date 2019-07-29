@@ -2,7 +2,7 @@ package com.pattern.demo4.factory.simpleFactory;
 
 /**
  * Desc:1.简单工厂模式
- *      2.产品类使用接口实现
+ * 2.产品类使用接口实现
  * Created by jinx on 2017/8/8.
  */
 public class NvWa {

@@ -7,7 +7,7 @@ package com.common.test.demo6_kt.rsaEncrypt.v2;
  */
 public class RSATest {
     public static void main(String[] args) throws Exception {
-        String filepath="f:/rsaTest/";
+        String filepath = "f:/rsaTest/";
 
 //        RSAEncryptUtil.genKeyPair(filepath);
 
@@ -40,21 +40,21 @@ public class RSATest {
 
         System.out.println("---------------私钥签名过程------------------");
 //        String content="ihep_这是用于签名的原始数据";
-        String content="{\"calType\":\"\",\"pageNo\":\"1\",\"pageSize\":\"20\",\"remark\":\"测试\",\"target\":\"\"}";
+        String content = "{\"calType\":\"\",\"pageNo\":\"1\",\"pageSize\":\"20\",\"remark\":\"测试\",\"target\":\"\"}";
 
         String signstr1 = "dc9PKtLLYRmMB1cJHrT5C+YvB3MB5d6Q+EZhoXRQfj4c7vxwJAywNsZmbXZVKk1B\n" +
                 "F1q26SC8DmPhT9aiLVeXEXPT7Z3uua6YLFcBsDcOVsP1O5YGqHe4hfRiRlu8+hnG\n" +
                 "/kWXACgN7z1dXhO6abw/Rs3xx9KFkhQ1F23+ntc+6Dk=";
-        String signstr=RSASignatureUtil.sign(content,RSAEncryptUtil.loadPrivateKeyByFile(filepath));
-        System.out.println("签名原串："+content);
-        System.out.println("签名串："+signstr);
+        String signstr = RSASignatureUtil.sign(content, RSAEncryptUtil.loadPrivateKeyByFile(filepath));
+        System.out.println("签名原串：" + content);
+        System.out.println("签名串：" + signstr);
         System.out.println();
 
         System.out.println("---------------公钥校验签名------------------");
-        System.out.println("签名原串："+content);
-        System.out.println("签名串："+signstr);
+        System.out.println("签名原串：" + content);
+        System.out.println("签名串：" + signstr);
 
-        System.out.println("验签结果："+RSASignatureUtil.doCheck(content, signstr, RSAEncryptUtil.loadPublicKeyByFile(filepath)));
+        System.out.println("验签结果：" + RSASignatureUtil.doCheck(content, signstr, RSAEncryptUtil.loadPublicKeyByFile(filepath)));
         System.out.println();
 
     }

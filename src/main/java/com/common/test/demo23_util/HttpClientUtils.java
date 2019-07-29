@@ -41,7 +41,7 @@ public class HttpClientUtils {
 
 
     private static int MAX_PER_ROUTE = 100;
-    private static int MAX_TOTAL     = 200;
+    private static int MAX_TOTAL = 200;
     private static int SO_TIMEOUT = 10000;
     private static int CONNECTION_TIMEOUT = 10000;
     private static int TIME_OUT = 5000; //5000毫秒
@@ -53,8 +53,7 @@ public class HttpClientUtils {
     private static CloseableHttpClient httpClient = null;
 
 
-
-    static{
+    static {
         httpClient = initHttpClient();
     }
 
@@ -77,7 +76,7 @@ public class HttpClientUtils {
                 .setRetryHandler(new DefaultHttpRequestRetryHandler())
                 .setConnectionReuseStrategy(new DefaultConnectionReuseStrategy())
                 .setKeepAliveStrategy(new DefaultConnectionKeepAliveStrategy());
-        if(sslConnectionSocketFactory!=null){
+        if (sslConnectionSocketFactory != null) {
             httpClientBuilder.setSSLSocketFactory(sslConnectionSocketFactory);
         }
         return httpClientBuilder.build();
@@ -95,7 +94,7 @@ public class HttpClientUtils {
             }).build();
 
             return new SSLConnectionSocketFactory(sslContext);
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
         return null;
@@ -117,14 +116,16 @@ public class HttpClientUtils {
     public static String postJSON(String url, String content, List<Header> headers) throws Exception {
         return postContent(url, content, "application/json", headers);
     }
-        /**
-         * 通过request body，postContent 字符串内容，比如这些字符串是JSON/XML格式
-         * @param url
-         * @param content 参数，name=value
-         * @param headers
-         * @return
-         * @throws Exception
-         */
+
+    /**
+     * 通过request body，postContent 字符串内容，比如这些字符串是JSON/XML格式
+     *
+     * @param url
+     * @param content 参数，name=value
+     * @param headers
+     * @return
+     * @throws Exception
+     */
     public static String postContent(String url, String content, String contentType, List<Header> headers) throws Exception {
 
         HttpPost post = new HttpPost(url);
@@ -132,8 +133,8 @@ public class HttpClientUtils {
 
         post.setHeader(HTTP.CONTENT_ENCODING, CHARSET);
 
-        if(!CollectionUtils.isEmpty(headers)){
-            for(Header header : headers){
+        if (!CollectionUtils.isEmpty(headers)) {
+            for (Header header : headers) {
                 post.addHeader(header);
             }
         }
@@ -156,11 +157,11 @@ public class HttpClientUtils {
             if (entity != null) {
                 return EntityUtils.toString(entity, CHARSET);
             }
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
-            logger.error("HttpClient.POST请求数据出错",e);
-        }finally {
-            if(response != null) {
+            logger.error("HttpClient.POST请求数据出错", e);
+        } finally {
+            if (response != null) {
                 EntityUtils.consume(response.getEntity()); //会自动释放连接
             }
         }
@@ -168,9 +169,9 @@ public class HttpClientUtils {
     }
 
 
-
     /**
      * 普通form提交
+     *
      * @param url
      * @param nameValuePairList 参数，name=value
      * @param headers
@@ -185,13 +186,13 @@ public class HttpClientUtils {
         post.setHeader(HTTP.CONTENT_ENCODING, CHARSET);
 
 
-        if(!CollectionUtils.isEmpty(headers)){
-            for(Header header : headers){
+        if (!CollectionUtils.isEmpty(headers)) {
+            for (Header header : headers) {
                 post.addHeader(header);
             }
         }
 
-        if(CollectionUtils.isNotEmpty(nameValuePairList)) {
+        if (CollectionUtils.isNotEmpty(nameValuePairList)) {
             HttpEntity he = new UrlEncodedFormEntity(nameValuePairList, CHARSET);
             post.setEntity(he);
         }
@@ -205,11 +206,11 @@ public class HttpClientUtils {
             if (entity != null) {
                 return EntityUtils.toString(entity, CHARSET);
             }
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
-            logger.error("HttpClient.POST请求数据出错",e);
-        }finally {
-            if(response != null) {
+            logger.error("HttpClient.POST请求数据出错", e);
+        } finally {
+            if (response != null) {
                 EntityUtils.consume(response.getEntity()); //会自动释放连接
             }
         }
@@ -219,7 +220,7 @@ public class HttpClientUtils {
     public static String postContent(String url, Map<String, String> params, List<Header> headers) throws Exception {
         List<NameValuePair> formParams = new ArrayList<NameValuePair>();
         if (params != null) {
-            for(Map.Entry<String, String> entry : params.entrySet()){
+            for (Map.Entry<String, String> entry : params.entrySet()) {
                 formParams.add(new BasicNameValuePair(entry.getKey(), entry.getValue()));
             }
         }
@@ -230,13 +231,12 @@ public class HttpClientUtils {
         List<NameValuePair> formParams = new ArrayList<NameValuePair>();
         if (params != null) {
 
-            for(Map.Entry<String, String> entry : params.entrySet()){
+            for (Map.Entry<String, String> entry : params.entrySet()) {
                 formParams.add(new BasicNameValuePair(entry.getKey(), entry.getValue()));
             }
         }
         return postContent(url, formParams, null);
     }
-
 
 
     public static String get(String url, Map<String, String> params, Header[] headers) throws Exception {
@@ -245,7 +245,7 @@ public class HttpClientUtils {
 
         if (params != null) {
             List<NameValuePair> ps = new ArrayList<NameValuePair>();
-            for(Map.Entry<String, String> entry : params.entrySet()){
+            for (Map.Entry<String, String> entry : params.entrySet()) {
                 ps.add(new BasicNameValuePair(entry.getKey(), entry.getValue()));
             }
             uriStr.append("?");
@@ -255,8 +255,8 @@ public class HttpClientUtils {
         HttpGet get = new HttpGet(uriStr.toString());
         get.setConfig(requestConfig);
 
-        if(headers!=null){
-            for(Header header : headers){
+        if (headers != null) {
+            for (Header header : headers) {
                 get.addHeader(header);
             }
         }
@@ -272,9 +272,9 @@ public class HttpClientUtils {
 
         } catch (Exception e) {
             e.printStackTrace();
-            logger.error("HttpClient.GET请求数据出错",e);
-        }finally {
-            if(response != null) {
+            logger.error("HttpClient.GET请求数据出错", e);
+        } finally {
+            if (response != null) {
                 EntityUtils.consume(response.getEntity()); //会自动释放连接
             }
         }
@@ -291,7 +291,7 @@ public class HttpClientUtils {
 
 
     public static void main(String[] args) throws Exception {
-        String ret = HttpClientUtils.postJSON("http://localhost:8081/security-rpc/app/user/getUser","{\"code\": 0}");
-        System.out.println("ret:"+ret);
+        String ret = HttpClientUtils.postJSON("http://localhost:8081/security-rpc/app/user/getUser", "{\"code\": 0}");
+        System.out.println("ret:" + ret);
     }
 }

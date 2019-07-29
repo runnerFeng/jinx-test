@@ -5,5 +5,5 @@ package com.pattern.demo1.strategy;
  * Created by jinx on 2017/8/5.
  */
 public interface IStrategy {
-     void operate();
+    void operate();
 }

@@ -8,9 +8,10 @@ import javax.validation.ConstraintValidatorContext;
  * @date 2018/9/13 18:45
  * Desc:
  */
-public class TrimValidatorClass implements ConstraintValidator<TrimValidator,Object> {
+public class TrimValidatorClass implements ConstraintValidator<TrimValidator, Object> {
 
     private String value;
+
     @Override
     public void initialize(TrimValidator constraintAnnotation) {
         this.value = constraintAnnotation.values();
@@ -18,8 +19,8 @@ public class TrimValidatorClass implements ConstraintValidator<TrimValidator,Obj
 
     @Override
     public boolean isValid(Object value, ConstraintValidatorContext context) {
-        boolean flag  = false;
-        if (value.equals(flag)){
+        boolean flag = false;
+        if (value.equals(flag)) {
             return true;
         }
         return false;

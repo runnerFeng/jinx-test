@@ -14,7 +14,6 @@ import java.io.IOException;
  * 简单的POST请求执行器，请求的参数是String, 返回的结果也是String
  *
  * @author Daniel Qian
- *
  */
 public class SimplePostRequestExecutor implements RequestExecutor<String, String> {
 
@@ -30,7 +29,7 @@ public class SimplePostRequestExecutor implements RequestExecutor<String, String
             StringEntity entity = new StringEntity(postEntity, Consts.UTF_8);
             httpPost.setEntity(entity);
         }
-        
+
         CloseableHttpResponse response = httpclient.execute(httpPost);
         String responseContent = Utf8ResponseHandler.INSTANCE.handleResponse(response);
         return responseContent;
