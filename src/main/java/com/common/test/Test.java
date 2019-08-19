@@ -1,7 +1,9 @@
 package com.common.test;
 
+import com.common.test.demo23_util.JsonUtils;
+
 import java.text.SimpleDateFormat;
-import java.util.Calendar;
+import java.util.*;
 
 /**
  * Desc:
@@ -29,6 +31,29 @@ public class Test {
         thisMonthStart.set(thisMonthStart.get(Calendar.YEAR), thisMonthStart.get(Calendar.MONTH), 1, 0, 0, 0);
         System.out.println(thisMonthStart.getTime());
 
+        System.out.println("----------");
+        List<User> userList = new ArrayList<>();
+        userList.add(new User("jinx",10));
+        userList.add(new User("lux",12));
 
+        Map<Integer,List<User>> map = new HashMap<>();
+        map.put(1,userList);
+
+        System.out.println(JsonUtils.toJsonString(userList));
+        userList.get(0).age=13;
+        System.out.println(JsonUtils.toJsonString(userList));
+
+        System.out.println(JsonUtils.toJsonString(map));
+
+    }
+
+    public static class User{
+        public String name;
+        public int age;
+
+        public User(String name, int age) {
+            this.name = name;
+            this.age = age;
+        }
     }
 }
