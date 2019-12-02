@@ -204,13 +204,19 @@
             <artifactId>quartz</artifactId>
             <version>1.5.2</version>
         </dependency>
-
+        <!--dingding-->
         <dependency>
             <groupId>taobao-sdk-java-auto</groupId>
             <artifactId>taobao-sdk-java-auto</artifactId>
             <scope>system</scope>
             <version>1.0</version>
             <systemPath>${project.basedir}/lib/taobao-sdk-java-auto.jar</systemPath>
+        </dependency>
+        <!--hutool-->
+        <dependency>
+            <groupId>cn.hutool</groupId>
+            <artifactId>hutool-all</artifactId>
+            <version>4.1.19</version>
         </dependency>
     </dependencies>
 
