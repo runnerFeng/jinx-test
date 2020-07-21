@@ -1,4 +1,4 @@
-package com.alogrithm.sort;
+package com.algorithm.sort;
 
 /**
  * Desc:冒泡排序
