@@ -22,7 +22,6 @@ public class Fibonacci {
         }
         if (n > 1) {
             result = fibonacci(n - 1) + fibonacci(n - 2);
-            System.out.println(result);
         }
         return result;
     }
