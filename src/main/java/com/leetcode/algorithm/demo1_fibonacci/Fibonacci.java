@@ -9,20 +9,13 @@ public class Fibonacci {
 
     public static void main(String[] args) {
         int result = fibonacci(5);
-        System.out.println("result:"+result);
+        System.out.println("result:" + result);
     }
 
     private static int fibonacci(int n) {
-        int result = 0;
-        if (n == 0) {
-            return 0;
+        if (n < 1) {
+            return n;
         }
-        if (n == 1) {
-            return 1;
-        }
-        if (n > 1) {
-            result = fibonacci(n - 1) + fibonacci(n - 2);
-        }
-        return result;
+        return fibonacci(n - 1) + fibonacci(n - 2);
     }
 }
