@@ -3,7 +3,7 @@ package com.leetcode.algorithm.demo1_fibonacci;
 /**
  * @Author: Aug
  * @Date: 2020-08-07 00:47
- * @Desc:
+ * @Desc: 菲波那切数列
  */
 public class Fibonacci {
 
