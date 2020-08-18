@@ -14,4 +14,9 @@ public class Test2 extends Test1 {
         this.gender = gender;
         this.age = age;
     }
+
+    public static void main(String[] args) {
+        Test2 test2 = new Test2("aug","123","man",29);
+        System.out.println(test2.age);
+    }
 }

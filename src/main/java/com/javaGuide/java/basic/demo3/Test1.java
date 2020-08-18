@@ -12,6 +12,9 @@ public class Test1 {
     private String username;
     private String password;
 
+   /* public Test1() {
+    }
+*/
     public Test1(String username, String password) {
         this.username = username;
         this.password = password;
