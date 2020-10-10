@@ -21,7 +21,13 @@ public class Test {
 
 //    public int[] indexOf(int t) {
 //        Node n = head;
-//        int[] arrays = new int[n.length()];
+//        // 计算node的长度用以初始化数组大小
+//        int m = 0;
+//        for (int k = 0; n.next != null; k++) {
+//            m++;
+//        }
+//
+//        int[] arrays = new int[m];
 //        int j = 0;
 //        // 标记是否是否匹配到链表中的元素
 //        int flag = 0;
@@ -46,7 +52,14 @@ public class Test {
 //        } else {
 //            int[] order = L.indexOf(tf1.getText());
 //            if (order[0] != -1) {
-//                tf3.setText("顺序表中出现该值的位置有:" + order);
+//                // 遍历order中的元素进行拼接
+//                String result = "";
+//                for (int i = 0; i < order.length; i++) {
+//                    int o = order[i];
+//                    result += o + ",";
+//                }
+//                result = result.substring(0, order.length - 1);
+//                tf3.setText("顺序表中出现该值的位置有:" + result);
 //            } else {
 //                tf3.setText("此顺序表中不包含值为" + tf1.getText() + "的数据元素");
 //            }
