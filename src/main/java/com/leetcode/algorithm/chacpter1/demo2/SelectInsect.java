@@ -1,4 +1,4 @@
-package com.leetcode.algorithm.demo2;
+package com.leetcode.algorithm.chacpter1.demo2;
 
 /**
  * @Author: Aug
