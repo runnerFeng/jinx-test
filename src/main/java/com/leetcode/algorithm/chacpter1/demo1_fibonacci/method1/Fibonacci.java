@@ -14,7 +14,7 @@ public class Fibonacci {
 
     public static void main(String[] args) {
         long start = System.currentTimeMillis();
-        int result = fibonacci(60);
+        int result = fibonacci(10);
         long end = System.currentTimeMillis();
         log.info("result:{},cost time:{}", result, end - start);
     }
