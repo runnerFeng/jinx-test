@@ -1,4 +1,4 @@
-package com.leetcode.algorithm.chacpter1.demo2.method1;
+package com.leetcode.algorithm.chacpter1.demo2_selectInsert.method1;
 
 /**
  * @Author: Aug

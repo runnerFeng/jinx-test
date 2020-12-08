@@ -1,4 +1,4 @@
-package com.leetcode.algorithm.chacpter1.demo2.method2;
+package com.leetcode.algorithm.chacpter1.demo2_selectInsert.method2;
 
 import lombok.extern.slf4j.Slf4j;
 
