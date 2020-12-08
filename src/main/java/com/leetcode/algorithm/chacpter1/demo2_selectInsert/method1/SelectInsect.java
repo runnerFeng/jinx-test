@@ -1,9 +1,10 @@
-package com.leetcode.algorithm.demo2;
+package com.leetcode.algorithm.chacpter1.demo2_selectInsert.method1;
 
 /**
  * @Author: Aug
  * @Date: 2020-08-17 21:24
- * @Desc:搜索插入位置
+ * @Desc:搜索插入位置:二分法
+ * 时间复杂度：O(logN)
  */
 public class SelectInsect {
 

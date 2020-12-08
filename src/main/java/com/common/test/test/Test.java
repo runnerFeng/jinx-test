@@ -1,4 +1,4 @@
-package com.common.test;
+package com.common.test.test;
 
 import com.common.test.demo23_util.JsonUtils;
 
