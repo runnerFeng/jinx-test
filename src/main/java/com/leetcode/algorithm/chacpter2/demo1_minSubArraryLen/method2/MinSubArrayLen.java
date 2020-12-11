@@ -5,7 +5,7 @@ import lombok.extern.slf4j.Slf4j;
 /**
  * @Author: Aug
  * @Date: 2020-12-09 19:59
- * @Desc: 最下子数组长度////
+ * @Desc: 最小子数组长度
  */
 @Slf4j
 public class MinSubArrayLen {
@@ -22,8 +22,8 @@ public class MinSubArrayLen {
         int minLen = 0;
         int j = 0;
         int sum = 0;
-        for (int i = 0; i < nums.length; i++) {
-         int element = nums[]
+        while (){
+
         }
         return minLen;
     }
