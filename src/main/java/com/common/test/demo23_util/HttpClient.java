@@ -166,7 +166,7 @@ public class HttpClient {
                     setConnectionManager(cm).
                     setRetryHandler(requestRetryHandler).build();
             /*不用连接池方式*/
-            /*httpClient = HttpClients.createDefault();*/
+            /*httpclient = HttpClients.createDefault();*/
             httpPost.setConfig(config);
             response = httpClient.execute(httpPost);
             rr = getContent(response);
@@ -190,7 +190,7 @@ public class HttpClient {
                     .setConnectionManager(cm)
                     .setRetryHandler(requestRetryHandler).build();
             /*不用连接池方式*/
-            /*httpClient = HttpClients.createDefault();*/
+            /*httpclient = HttpClients.createDefault();*/
             httpGet.setConfig(config);
             response = httpClient.execute(httpGet);
             rr = getContent(response);
@@ -217,7 +217,7 @@ public class HttpClient {
                     .setSSLHostnameVerifier(hostnameVerifier)
                     .setRetryHandler(requestRetryHandler).build();
             /*不用连接池方式*/
-            /*httpClient = HttpClients.custom().setSSLHostnameVerifier(hostnameVerifier).build();*/
+            /*httpclient = HttpClients.custom().setSSLHostnameVerifier(hostnameVerifier).build();*/
             httpGet.setConfig(config);
             response = httpClient.execute(httpGet);
             rr = getContent(response);
