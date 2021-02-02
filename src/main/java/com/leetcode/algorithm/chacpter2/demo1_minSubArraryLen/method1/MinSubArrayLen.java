@@ -5,8 +5,7 @@ import lombok.extern.slf4j.Slf4j;
 /**
  * @Author: Aug
  * @Date: 2020-12-08 19:31
- * @Desc:最小子数组长度：暴力法
- * 执行结果：通过
+ * @Desc:最小子数组长度：暴力法 执行结果：通过
  * 执行用时：145 ms, 在所有 Java 提交中击败了14.96%的用户
  * 内存消耗：38.3 MB, 在所有 Java 提交中击败了88.14%的用户
  */
@@ -15,7 +14,7 @@ public class MinSubArrayLen {
     public static void main(String[] args) {
         long start = System.currentTimeMillis();
         int[] nums = {1, 3, 5, 2, 7, 2};
-        int target = 1;
+        int target = 8;
         int result = minSubArrayLen(nums, target);
         long end = System.currentTimeMillis();
         log.info("result:{},cost time:{}", result, end - start);
