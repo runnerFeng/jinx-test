@@ -6,7 +6,7 @@ import lombok.extern.slf4j.Slf4j;
 /**
  * @Author: Aug
  * @Date: 2021-02-03 10:23
- * @Desc: https://www.cnblogs.com/labuladong/p/12320488.html
+ * @Desc: <link https://www.cnblogs.com/labuladong/p/12320488.html/>
  */
 @Slf4j
 public class ReverseKGroup {
@@ -59,6 +59,7 @@ public class ReverseKGroup {
             next = current.next;
             // 移动指针
             current.next = pre;
+            // 移动current,next
             pre = current;
             current = next;
         }
@@ -87,10 +88,10 @@ public class ReverseKGroup {
         }
         // 部分反转
         ListNode newHead = reverse(a, b);
-        // 连接每个部分
+        // 递归连接每个部分
         a.next = reverseKGroup(b, k);
+        // 第一次返回的newHead没用，后续返回的newHand才会用作连接节点
         return newHead;
     }
-
 
 }
