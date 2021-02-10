@@ -16,22 +16,17 @@ public class LargestRectangleArea {
         log.info("max area:{}", maxArea);
     }
 
-    private static int calculateMaxArea(int[] nums) {
-        int area = 0, length = nums.length;
-        if (length == 0) {
-            return area;
-        }
-
-        int height;
-        for (int i = 0; i < length; i++) {
-            height = nums[i];
+    private static int calculateMaxArea(int[] heights) {
+        int area = 0;
+        for (int i = 0; i < heights.length; i++) {
             int left = i, right = i;
+            int height = heights[i];
 
-            while (left - 1 > 0 && nums[left - 1] >= height) {
+            while (left - 1 >= 0 && heights[left - 1] >= height) {
                 left--;
             }
 
-            while (right + 1 < length && nums[right + 1] >= height) {
+            while (right + 1 <= heights.length-1 && heights[right + 1] >= height) {
                 right++;
             }
 
