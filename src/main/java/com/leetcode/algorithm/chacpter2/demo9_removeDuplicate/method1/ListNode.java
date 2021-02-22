@@ -1,4 +1,4 @@
-package com.leetcode.algorithm.chacpter2.demo7_removeNthFromEnd.method1;
+package com.leetcode.algorithm.chacpter2.demo9_removeDuplicate.method1;
 
 import lombok.Data;
 
@@ -6,7 +6,6 @@ import lombok.Data;
  * @Author: Aug
  * @Date: 2021-02-03 10:24
  * @Desc: 单向链表
- * @Desc:
  */
 @Data
 public class ListNode {
