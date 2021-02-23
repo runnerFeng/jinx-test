@@ -6,7 +6,7 @@ package com.algorithm.sort;
  */
 public class BubbleSort {
     public static void main(String[] args) {
-        int score[] = {101, 69, 75, 87, 82, 90, 99, 100};
+        int[] score = {101, 69, 75, 87, 82, 90, 99, 100};
         bubbleSort(score);
 
         for (int a = 0; a < score.length; a++) {
