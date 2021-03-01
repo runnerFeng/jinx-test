@@ -8,7 +8,7 @@ import java.util.PriorityQueue;
 /**
  * @Author: fans
  * @Date: 2021/2/24 23:24
- * @Desc:
+ * @Desc: 最接近远点的k个点；实现方式：优先队列一般可以应用在股票交易所的挂单薄，当然也可以用TreeMap实现（TreeMap<Integer,List<int[]>> treeMap）
  */
 @Slf4j
 public class KClosest {
