@@ -7,7 +7,7 @@ import java.util.Arrays;
 /**
  * @Author: fans
  * @Date: 2021/2/24 22:32
- * @Desc: 摆动排序；实现步骤排序->逆序穿插
+ * @Desc: 摆动排序；实现步骤：排序->逆序穿插
  */
 @Slf4j
 public class WiggleSort {
