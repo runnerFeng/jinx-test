@@ -7,15 +7,19 @@ import java.util.PriorityQueue;
 /**
  * @Author: Aug
  * @Date: 2021-03-01 16:08
- * @Desc: todo
+ * @Desc:
  */
 @Slf4j
 public class DiagonalSort {
 
     public static void main(String[] args) {
         int[][] mat = {{3, 3, 1, 1}, {2, 2, 1, 2}, {1, 1, 1, 2}};
+        log.info("mat:{}", mat);
         int[][] result = diagonalSort(mat);
-        log.info("result:{}",result);
+
+        for (int i = 0; i < result.length; i++) {
+            log.info("result:{}", result[i]);
+        }
     }
 
     private static int[][] diagonalSort(int[][] mat) {
@@ -26,6 +30,7 @@ public class DiagonalSort {
         for (int i = 0; i < m; i++) {
             // 列
             for (int j = 0; j < n; j++) {
+                // 主对角线上元素的特点是：纵坐标 - 横坐标 = 定值
                 if (queues[j - i + m - 1] == null) {
                     queues[j - i + m - 1] = new PriorityQueue();
                 }
@@ -39,7 +44,6 @@ public class DiagonalSort {
                 result[i][j] = queues[index].poll();
             }
         }
-
         return result;
     }
 
