@@ -5,7 +5,7 @@ import lombok.extern.slf4j.Slf4j;
 /**
  * @Author: Aug
  * @Date: 2021-02-23 15:04
- * @Desc: 根据列求和
+ * @Desc: 接雨水:根据列求和
  */
 @Slf4j
 public class Trap {
