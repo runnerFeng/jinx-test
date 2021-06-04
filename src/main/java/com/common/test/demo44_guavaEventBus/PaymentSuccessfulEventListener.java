@@ -1,4 +1,4 @@
-package com.common.test.demo44_eventBus;
+package com.common.test.demo44_guavaEventBus;
 
 import com.google.common.eventbus.Subscribe;
 import lombok.Data;
