@@ -18,7 +18,7 @@
     </contributors>
 
     <properties>
-        <vertx.version>3.4.2</vertx.version>
+        <vertx.version>3.5.4</vertx.version>
         <main.class>io.vertx.core.Launcher</main.class>
         <main.verticle>com.common.test.demo46_Vertx.method1.Test2</main.verticle>
     </properties>
