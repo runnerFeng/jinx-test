@@ -1,4 +1,4 @@
-package com.common.test.demo44_eventBus;
+package com.common.test.demo44_guavaEventBus;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
