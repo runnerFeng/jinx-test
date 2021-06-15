@@ -14,7 +14,7 @@ public class Client {
 
         context.setState(state);
 
-        context.request("test");
+        context.request("sortTest");
 
     }
 

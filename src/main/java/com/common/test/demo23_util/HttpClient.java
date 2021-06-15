@@ -343,7 +343,7 @@ public class HttpClient {
         String sms = "http://192.168.9.71:8080/sms/sms_module/sendMsg";
         JSONObject reqBody = new JSONObject();
         reqBody.put("phoneNumber", "13530969494");
-        reqBody.put("smsContent", "test");
+        reqBody.put("smsContent", "sortTest");
         reqBody.put("smsType", "5");
         System.out.println(reqBody.toJSONString());
         System.out.println(HttpClient.newInstance().sendHttpPost(sms, reqBody.toJSONString(), null, null));

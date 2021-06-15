@@ -1,6 +1,6 @@
-//package com.common.test.demo37_dingding;
+//package com.common.sortTest.demo37_dingding;
 //
-//import com.common.test.demo23_util.JsonUtils;
+//import com.common.sortTest.demo23_util.JsonUtils;
 //import com.dingtalk.api.DefaultDingTalkClient;
 //import com.dingtalk.api.DingTalkClient;
 //import com.dingtalk.api.request.OapiRobotSendRequest;

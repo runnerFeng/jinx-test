@@ -25,7 +25,7 @@ public class ControllerInterceptor extends HandlerInterceptorAdapter {
 
         watchRequestParams(request);
 
-        // TODO: 2017/3/21 test 
+        // TODO: 2017/3/21 sortTest
 //        Principal principal = request.getUserPrincipal();
 //        if (null != principal && null != principal.getName()) {
 //            User user = this.userService.findUserByMobile(principal.getName());

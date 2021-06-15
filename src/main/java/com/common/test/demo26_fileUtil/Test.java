@@ -9,6 +9,6 @@ public class Test {
     public static void main(String[] args) {
         FileProcessor fileProcessor = new FileProcessorImpl();
         LineProcessor lineProcessor = new LineProcessorImpl();
-        fileProcessor.processorByLine("f:\\imageTest\\test.vcf", lineProcessor);
+        fileProcessor.processorByLine("f:\\imageTest\\sortTest.vcf", lineProcessor);
     }
 }

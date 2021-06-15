@@ -1,4 +1,4 @@
-package com.algorithm.test.insertSort;
+package com.algorithm.sortTest.insertSort;
 
 /**
  * @Author: Aug

@@ -1,4 +1,4 @@
-package com.algorithm.test.insertSort;
+package com.algorithm.sortTest.insertSort;
 
 import lombok.extern.slf4j.Slf4j;
 

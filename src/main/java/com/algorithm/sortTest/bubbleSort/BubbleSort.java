@@ -1,4 +1,4 @@
-package com.algorithm.test.bubbleSort;
+package com.algorithm.sortTest.bubbleSort;
 
 import lombok.extern.slf4j.Slf4j;
 
