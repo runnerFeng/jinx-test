@@ -12,13 +12,11 @@ public class BubbleSort {
 
     public static void main(String[] args) {
         int[] array = {1, 3, 6, 2, 5, 8};
-        array = bubbleSort(array);
-        for (int i = 0; i < array.length; i++) {
-            log.info("array i:{}", array[i]);
-        }
+        bubbleSort(array);
+        log.info("array :{}", array);
     }
 
-    private static int[] bubbleSort(int[] array) {
+    private static void bubbleSort(int[] array) {
         // 控制趟数
         for (int i = 0; i < array.length - 1; i++) {
             // 控制次数,和右边的元素比较
@@ -30,7 +28,6 @@ public class BubbleSort {
                 }
             }
         }
-        return array;
     }
 
 }

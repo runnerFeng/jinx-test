@@ -25,7 +25,7 @@ public class FastSort {
         int i = start;
         int j = end;
         int base = a[i];
-        // 一次遍历
+        // 一次遍历找出需要和base交换的位置
         while (i < j) {
             while (a[j] >= base && i < j) {
                 j--;
@@ -42,8 +42,9 @@ public class FastSort {
         // 交换base和比较后的结果,此时i=j
         a[start] = a[i];
         a[i] = base;
-//        base = a[end];
+        // 递归左边
         fastSort(a, start, i - 1);
+        // 递归右边
         fastSort(a, i + 1, end);
     }
 
