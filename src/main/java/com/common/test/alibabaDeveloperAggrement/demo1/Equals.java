@@ -1,7 +1,7 @@
 package com.common.test.alibabaDeveloperAggrement.demo1;
 
 /**
- * Desc:equals test
+ * Desc:equals sortTest
  * Created by jinx on 2017/5/15.
  */
 public class Equals {

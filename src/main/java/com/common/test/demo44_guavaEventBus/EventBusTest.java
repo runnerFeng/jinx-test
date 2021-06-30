@@ -11,7 +11,7 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 public class EventBusTest {
     public static void main(String[] args) {
-        EventBus eventBus = new EventBus("test");
+        EventBus eventBus = new EventBus("sortTest");
         PaymentSuccessfulEventListener listener = new PaymentSuccessfulEventListener();
         eventBus.register(listener);
 

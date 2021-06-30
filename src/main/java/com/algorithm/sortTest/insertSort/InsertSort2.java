@@ -1,4 +1,4 @@
-package com.algorithm.test.insertSort;
+package com.algorithm.sortTest.insertSort;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -12,13 +12,11 @@ public class InsertSort2 {
 
     public static void main(String[] args) {
         int[] array = {3, 1, 4, 2};
-        array = insertSort(array);
-        for (int i = 0; i < array.length; i++) {
-            log.info("array i:{}", array[i]);
-        }
+        insertSort(array);
+        log.info("array :{}", array);
     }
 
-    private static int[] insertSort(int[] array) {
+    private static void insertSort(int[] array) {
         for (int i = 1; i < array.length; i++) {
             int temp = array[i];
             int j;
@@ -29,6 +27,5 @@ public class InsertSort2 {
             }
             array[j + 1] = temp;
         }
-        return array;
     }
 }

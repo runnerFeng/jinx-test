@@ -18,7 +18,7 @@ import java.util.List;
 public class RateReportUtil {
 
     public static ExcelWriter getWriter(OutputStream out, List<RateReportResponse> rows) {
-        ExcelWriter writer = ExcelUtil.getWriter("/Users/jinx/Desktop/test.xlsx");
+        ExcelWriter writer = ExcelUtil.getWriter("/Users/jinx/Desktop/sortTest.xlsx");
         writer.addHeaderAlias("id", "No");
         writer.addHeaderAlias("customerName", "Customer Name");
         writer.addHeaderAlias("currency", "Currency");
