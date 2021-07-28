@@ -12,7 +12,7 @@ public class FastSort {
 
     public static void main(String[] args) {
 
-        int a[] = {49, 38, 13, 27};
+        int[] a = {49, 38, 13, 27};
         log.info("a:{}", a);
         fastSort(a, 0, a.length - 1);
         log.info("a:{}", a);
