@@ -17,12 +17,30 @@ public class Test6 {
         // insert sort
 //        insertSort(array);
         // fast sort
-        fastSort(array);
+//        fastSort(array);
+        // shell sort
+//        shellSort(array);
         log.info("array:{}", array);
     }
 
+    private static void shellSort(int[] array) {
+        if (array == null || array.length < 2) {
+            return;
+        }
+        for (int gap = array.length / 2; gap > 0; gap /= 2) {
+            for (int i = gap; i < array.length; i++) {
+                int temp = array[i];
+                int j;
+                for ( j = i; j >= gap && array[j-gap]>temp; j-=gap) {
+                    array[j] = array[j-gap];
+                }
+                array[j] = temp;
+            }
+        }
+    }
+
     private static void fastSort(int[] array) {
-        fastSort(array, 0, array.length-1);
+        fastSort(array, 0, array.length - 1);
     }
 
     private static void fastSort(int[] array, int left, int right) {
@@ -48,8 +66,8 @@ public class Test6 {
             }
         }
         array[i] = index;
-        fastSort(array,left,i-1);
-        fastSort(array,i+1,right);
+        fastSort(array, left, i - 1);
+        fastSort(array, i + 1, right);
     }
 
     private static void insertSort(int[] array) {
