@@ -1,7 +1,7 @@
 package com.algorithm.sort;
 
 /**
- * Desc:冒泡排序
+ * Desc:冒泡排序:比较相邻两个元素
  * Created by lf on 2017/2/7
  */
 public class BubbleSort {

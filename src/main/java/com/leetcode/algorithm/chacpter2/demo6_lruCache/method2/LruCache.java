@@ -32,10 +32,10 @@ public class LruCache {
 
     public void put(int key, int value) {
         if (map.containsKey(key)) {
-            // delete least recently and add new value
+            // delete least recently
             map.remove(key);
-            map.put(key, value);
-            return;
+//            map.put(key, value);
+//            return;
         }
         if (map.size() >= capacity) {
             // remove链表头部是最久未被使用的key

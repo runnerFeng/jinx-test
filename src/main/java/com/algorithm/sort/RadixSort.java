@@ -10,7 +10,7 @@ package com.algorithm.sort;
  */
 public class RadixSort {
     public static void main(String[] args) {
-        int arr[] = {9, 3, 4, 5, 10, 12, 5, 6};
+        int[] arr = {9, 3, 4, 5, 10, 12, 5, 6};
         radixSort(arr);
         for (int i : arr) {
             System.out.println(i);
@@ -54,7 +54,9 @@ public class RadixSort {
      * @param exp
      */
     public static void countSort(int[] a, int exp) {
-        int i, output[] = new int[a.length], buckets[] = new int[10];
+        int i;
+        int[] output = new int[a.length];
+        int[] buckets = new int[10];
         // 将数据出现的次数存储在buckets[]中
         for (i = 0; i < a.length; i++) {
             buckets[(a[i] / exp) % 10]++;

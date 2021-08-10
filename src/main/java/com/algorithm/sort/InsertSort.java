@@ -1,17 +1,18 @@
 package com.algorithm.sort;
 
+import lombok.extern.slf4j.Slf4j;
+
 /**
  * @author jinx
  * @date 2019/2/15 15:02
  * Desc:插入排序:<a href="https://zhuanlan.zhihu.com/p/52884590"></a>
  */
+@Slf4j
 public class InsertSort {
     public static void main(String[] args) {
         int[] arr = {9, 3, 4, 5, 10, 12, 5, 6};
         insertSort(arr);
-        for (int i : arr) {
-            System.out.println(i);
-        }
+        log.info("arr:{}", arr);
     }
 
     public static void insertSort(int[] arr) {
