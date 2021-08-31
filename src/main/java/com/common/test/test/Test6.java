@@ -29,7 +29,8 @@ public class Test6 {
         // 5.fast sort
 //        fastSort(array);
         // 6.bucket sort
-        // 7. mergeSort(array)
+        // 7. mergeSort(array),归并排序
+        // mergeSort(array);
 
         log.info("array:{}", array);
         // lruCache
