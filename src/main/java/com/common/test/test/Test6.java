@@ -3,7 +3,6 @@ package com.common.test.test;
 import lombok.extern.slf4j.Slf4j;
 
 import java.util.LinkedHashMap;
-import java.util.Map;
 
 /**
  * @Author: Aug
@@ -15,24 +14,31 @@ public class Test6 {
 
     // lruCache
     private int capacity;
-    private Map<Integer, Integer> map = new LinkedHashMap<>();
+    private static LinkedHashMap<Integer, Integer> map = new LinkedHashMap<>();
 
     public static void main(String[] args) {
         int[] array = {8, 4, 2, 3};
         // 1.bubble sort
-        bubbleSort(array);
+//        bubbleSort(array);
         // 2.select sort
 //        selectSort(array);
         // 3.insert sort
-        insertSort(array);
+//        insertSort(array);
         // 4.shell sort
 //        shellSort(array);
         // 5.fast sort
 //        fastSort(array);
         // 6.bucket sort
+        // 7. mergeSort(array)
 
         log.info("array:{}", array);
         // lruCache
+
+        map.put(1,1);
+        map.put(2,2);
+        map.put(3,3);
+        log.info("map.remove(){}",map.entrySet().iterator().next().getKey());
+
     }
 
     private static void bubbleSort(int[] array) {
@@ -50,13 +56,13 @@ public class Test6 {
         }
     }
 
-    public static void selectSort(int[] array){
+    private static void selectSort(int[] array){
         for (int i = 0; i < array.length-1; i++) {
             // 找到最小数的下标
             int minIndex = i;
             // 使用for中的第一个条件控制下一次的起始位置，即把排好序的元素放到了最左边（bubbleSort是把排好序的元素放到了最右边，并且是通过for中第二个条件控制循环停止位置）
             for (int j = i; j < array.length-1; j++) {
-                if (array[j+1]<array[minIndex]){
+                if (array[minIndex]>array[j+1]){
                     minIndex = j+1;
                 }
             }
@@ -71,28 +77,17 @@ public class Test6 {
 
     /**
      * 插入已经排好序的数组中
+     *
      * @param array
      */
-//    private static void insertSort(int[] array) {
-//        for (int i = 1; i < array.length; i++) {
-//            int temp = array[i];
-//            int j;
-//            for (j = i - 1; j >= 0 && array[j] > temp; j--) {
-//                array[j + 1] = array[j];
-//            }
-//            array[j + 1] = temp;
-//        }
-//    }
-
-
-    private static void insertSort(int[] array){
+    private static void insertSort(int[] array) {
         for (int i = 1; i < array.length; i++) {
             int temp = array[i];
             int j;
-            for (j = i-1; j >=0 && array[j]>temp ; j--) {
-                array[j] = array[j+1];
+            for (j = i - 1; j >= 0 && array[j] > temp; j--) {
+                array[j + 1] = array[j];
             }
-            array[j+1] = temp;
+            array[j + 1] = temp;
         }
     }
 
@@ -143,29 +138,30 @@ public class Test6 {
         fastSort(array, i + 1, right);
     }
 
-    public int get(int key) {
-        if (!map.containsKey(key)) {
-            return -1;
-        }
-        makeRecently(key);
-        return map.get(key);
-    }
+//    public int get(int key) {
+//        if (!map.containsKey(key)) {
+//            return -1;
+//        }
+//        makeRecently(key);
+//        return map.get(key);
+//    }
+//
+//    private void makeRecently(int key) {
+//        int value = map.get(key);
+//        map.remove(key);
+//        map.put(key, value);
+//    }
+//
+//    public void put(int key, int value) {
+//        if (map.containsKey(key)) {
+//            map.remove(key);
+//        }
+//        if (map.keySet().size() >= capacity) {
+//            Integer oldKey = map.keySet().iterator().next();
+//            map.remove(oldKey);
+//        }
+//        map.put(key, value);
+//    }
 
-    private void makeRecently(int key) {
-        int value = map.get(key);
-        map.remove(key);
-        map.put(key, value);
-    }
-
-    public void put(int key, int value) {
-        if (map.containsKey(key)) {
-            map.remove(key);
-        }
-        if (map.keySet().size() >= capacity) {
-            Integer oldKey = map.keySet().iterator().next();
-            map.remove(oldKey);
-        }
-        map.put(key, value);
-    }
 
 }
