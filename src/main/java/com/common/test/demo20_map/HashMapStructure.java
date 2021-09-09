@@ -14,19 +14,19 @@ public class HashMapStructure {
         Country india = new Country("india", (long) 1000);
         Country japan = new Country("japan", (long) 10000);
         Country france = new Country("france", (long) 2000);
-        Country russa = new Country("russa", (long) 20000);
+        Country russia = new Country("russia", (long) 20000);
 
         Map<Country, String> countryCapitalMap = new HashMap<>();
         countryCapitalMap.put(india, "Delhi");
         countryCapitalMap.put(japan, "Tokyo");
         countryCapitalMap.put(france, "Paris");
-        countryCapitalMap.put(russa, "Moscow");
+        countryCapitalMap.put(russia, "Moscow");
 
         Iterator<Country> iterator = countryCapitalMap.keySet().iterator();
         while (iterator.hasNext()) {
             Country country = iterator.next();
-            String captial = countryCapitalMap.get(country);
-            System.out.println(captial);
+            String capital = countryCapitalMap.get(country);
+            System.out.println(capital);
         }
 
     }
