@@ -17,5 +17,10 @@ public class Test4 {
         list.add("d");
         list.add("e");
         System.out.println(list.contains("a"));
+        for (String s : list) {
+            if (s.equals("a")){
+                list.remove(s);
+            }
+        }
     }
 }

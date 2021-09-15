@@ -1,7 +1,5 @@
 package com.common.test.demo0_test;
 
-import javafx.beans.binding.ObjectBinding;
-
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -12,9 +10,9 @@ import java.util.stream.Collectors;
  * @Author: jinx
  * @Date: 2019/9/4 23:11
  * @Desc:报表系统选择数据结构不当引发的测试案例：如果后续程序需要从容器中遍历取出之前保存好的数据则多用map保存数据，少用list保存数据
- *       eg.报表系统中初始化8万个用户保存在map中，每个用户有11个币种，数据结构为Map<userId,List<UserDto>>，后续遍历每个用户的币种dto时，会消耗
- *       大概16ms的时间，如果有一万条记录则是160s,如果采用map结构Map<uesrId,Map<userId+currency>>则后续遍历每个用户币种时耗时几乎为零，效率提升
- *       10000*16倍
+ * eg.报表系统中初始化8万个用户保存在map中，每个用户有11个币种，数据结构为Map<userId,List<UserDto>>，后续遍历每个用户的币种dto时，会消耗
+ * 大概16ms的时间，如果有一万条记录则是160s,如果采用map结构Map<uesrId,Map<userId+currency>>则后续遍历每个用户币种时耗时几乎为零，效率提升
+ * 10000*16倍
  */
 public class Test1 {
     public static void main(String[] args) {
