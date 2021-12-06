@@ -13,5 +13,5 @@ import java.util.List;
 @Slf4j
 @Data
 public class Test9 {
-    private List<LocalPaymentMethod> list;
+    private List<PassionLocalPaymentMethod> list;
 }

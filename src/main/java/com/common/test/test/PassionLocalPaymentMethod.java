@@ -10,7 +10,7 @@ import lombok.Data;
  */
 @Data
 @AllArgsConstructor
-public class LocalPaymentMethod {
+public class PassionLocalPaymentMethod {
     private String areaCode;
     private String areaName;
     private String payChannel;
