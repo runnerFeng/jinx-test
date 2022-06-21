@@ -1,10 +1,10 @@
-package com.pattern.demo11_decorator.demo2;
+package com.pattern.demo11_decorator.demo1;
 
 /**
  * Desc:
  * Created by jinx on 2017/8/25.
  */
-public class ForthGradeSchooleReport implements SchoolReport {
+public class ForthGradeSchoolReport extends SchoolReport {
     @Override
     public void report() {
         System.out.println("尊敬的XXX家长:");

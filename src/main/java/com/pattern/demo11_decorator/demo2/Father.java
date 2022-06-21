@@ -8,7 +8,7 @@ package com.pattern.demo11_decorator.demo2;
 public class Father {
     public static void main(String[] args) {
         SchoolReport schoolReport = null;
-        schoolReport = new ForthGradeSchooleReport();
+        schoolReport = new ForthGradeSchoolReport();
 
 //        schoolReport.report();
         schoolReport = new HighScoreDecorator(schoolReport);
