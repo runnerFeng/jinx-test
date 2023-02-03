@@ -1,16 +1,18 @@
-package com.leetcode.algorithm.chacpter2.demo6_lruCache.method2;
+package com.leetcode.algorithm.chacpter2.demo6_lruCache.method3;
+
 import cn.hutool.json.JSONUtil;
 import lombok.extern.slf4j.Slf4j;
 
 /**
- * @Author: Aug
- * @Date: 2021-02-05 18:22
- * @Desc:
+ * @Author：summer
+ * @Date：2023/2/3 11:40
+ * @Desc：
  */
 @Slf4j
 public class Test {
 
     public static void main(String[] args) {
+
         LruCache lruCache = new LruCache(2);
         lruCache.put(1, 1);
         lruCache.put(2, 2);
@@ -32,5 +34,4 @@ public class Test {
         int value4 = lruCache.get(2);
         log.info("value4:{}", value4);
     }
-
 }
