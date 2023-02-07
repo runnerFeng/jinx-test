@@ -25,7 +25,7 @@ public class InsertSort2 {
             for (j = i - 1; j >= 0 && array[j] > temp; j--) {
                 array[j + 1] = array[j];
             }
-            // 注意此处赋值给j+1是因为经过了一次for训话的--操作，所以要加回来,其本质还是数组中的第j个元素
+            // 注意此处赋值给j+1是因为经过了一次for循环的--操作，所以要加回来,其本质还是数组中的第j个元素
             array[j + 1] = temp;
         }
     }
