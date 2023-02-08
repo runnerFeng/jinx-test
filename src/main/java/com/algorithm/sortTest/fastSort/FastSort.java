@@ -24,13 +24,15 @@ public class FastSort {
         }
         int i = start;
         int j = end;
-        int base = a[i];
-        // 一次遍历找出需要和base交换的位置
+        // 此刻基准位a[i]是空的
+        int baseTemp = a[start];
+        // 一次遍历找出最终需要和base交换的位置
         while (i < j) {
-            while (a[j] >= base && i < j) {
+            // 多次遍历找到i和j互换的位置，直到i=j终止
+            while (a[j] >= baseTemp && i < j) {
                 j--;
             }
-            while (a[i] <= base && i < j) {
+            while (a[i] <= baseTemp && i < j) {
                 i++;
             }
             if (i < j) {
@@ -41,7 +43,7 @@ public class FastSort {
         }
         // 交换base和比较后的结果,此时i=j
         a[start] = a[i];
-        a[i] = base;
+        a[i] = baseTemp;
         // 递归左边
         fastSort(a, start, i - 1);
         // 递归右边
