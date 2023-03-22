@@ -8,7 +8,7 @@ import java.util.List;
  */
 public class BMWBuilder extends CarBuilder {
 
-    private BMWModel bmwModel = new BMWModel();
+    private CarModel bmwModel = new BMWModel();
 
     @Override
     public void setSetSequence(List<String> sequenceList) {

@@ -9,8 +9,8 @@ import java.util.List;
  */
 public class Direct {
     private List<String> sequence = new ArrayList<>();
-    private BenzBuilder benzBuilder = new BenzBuilder();
-    private BMWBuilder bmwBuilder = new BMWBuilder();
+    private CarBuilder benzBuilder = new BenzBuilder();
+    private CarBuilder bmwBuilder = new BMWBuilder();
 
     //生产不同需求的奔驰
     public BenzModel getABenzModel() {
