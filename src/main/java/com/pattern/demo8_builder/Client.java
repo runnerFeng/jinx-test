@@ -4,11 +4,12 @@ package com.pattern.demo8_builder;
  * Desc:1.产品类和建造者类都是使用继承来实现的，重点是direct类
  * 2.建造者模式最主要功能是基本方法的调用顺序安排，也就是这些基本方法已经由子类实现了；而工厂方法则重点是创建，你要什么对象我创造一个对象出来，
  * 组装顺序则不是他关心的
+ * 3.网友评论：如果将抽象工厂模式看成一个汽车配件生产厂，生成不同类型的汽车配件，那么建造者模式就是一个汽车组装厂，通过对配件进行组装返回一辆完整的汽车
  * Created by jinx on 2017/8/14.
  */
 public class Client {
     public static void main(String[] args) {
-        //1.原始操作方式,不能满足多远需求
+        //1.原始操作方式,不能满足多元需求
 //        BenzModel benzModel = new BenzModel();
 //        List<String> sequence = new ArrayList<>();
 //        sequence.add("engineBoom");
