@@ -19,8 +19,8 @@ public class ReverseKGroup {
         node2.next = node3;
 
         log.info("node i:{}", node1);
-//        reverse(node1);
-//        log.info("node i:{}", node3);
+        reverse(node1);
+        log.info("node i:{}", node3);
 
 //        reverse(node1, node2);
 //        log.info("node i:{}", node1);
@@ -40,7 +40,9 @@ public class ReverseKGroup {
         while (current != null) {
             next = current.next;
             current.next = pre;
+            // 将处理好的current作为后面的current
             pre = current;
+            // 移动current指针到下一个元素
             current = next;
         }
         return pre;
