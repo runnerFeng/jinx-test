@@ -14,11 +14,12 @@ public class MaxSlidingWindow {
 
     public static void main(String[] args) {
         int[] nums = {1, 3, -1, -3, 5, 3, 6, 7};
-        int k = 3;
+        int[] array = new int[]{1,3,6,2,9,0,12,4,7};
+        int k = 4;
 
 //        int[] nums = {1, -1};
 //        int k = 1;
-        int[] result = maxSlidingWindow(nums, k);
+        int[] result = maxSlidingWindow(array, k);
         log.info("result:{}", result);
     }
 
